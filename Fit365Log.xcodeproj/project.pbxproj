@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC57E7112C64CEC200B4C2C5 /* Fit365LogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */; };
+		FC57E7132C64CEC200B4C2C5 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7122C64CEC200B4C2C5 /* WelcomeScreen.swift */; };
+		FC57E7152C64CEC400B4C2C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */; };
+		FC57E7182C64CEC400B4C2C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57E7172C64CEC400B4C2C5 /* Preview Assets.xcassets */; };
+		FC57E71A2C64CEC400B4C2C5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7192C64CEC400B4C2C5 /* Persistence.swift */; };
+		FC57E71D2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC57E71B2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld */; };
+		FC57E7292C64D18C00B4C2C5 /* Color+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7282C64D18C00B4C2C5 /* Color+extensions.swift */; };
+		FC57E72B2C64D1F300B4C2C5 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E72A2C64D1F300B4C2C5 /* UIApplication+extension.swift */; };
+		FC57E7302C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E72F2C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift */; };
+		FC57E7322C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7312C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift */; };
+		FC57E7342C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7332C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift */; };
+		FC57E7362C64E68B00B4C2C5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7352C64E68B00B4C2C5 /* AlertView.swift */; };
+		FC57E7392C64F97B00B4C2C5 /* HealthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7382C64F97B00B4C2C5 /* HealthScreen.swift */; };
+		FC57E73C2C64F99D00B4C2C5 /* TrainingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E73B2C64F99D00B4C2C5 /* TrainingScreen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FC57E70D2C64CEC200B4C2C5 /* Fit365Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit365Log.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fit365LogApp.swift; sourceTree = "<group>"; };
+		FC57E7122C64CEC200B4C2C5 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC57E7172C64CEC400B4C2C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC57E7192C64CEC400B4C2C5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		FC57E71C2C64CEC400B4C2C5 /* Fit365Log.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fit365Log.xcdatamodel; sourceTree = "<group>"; };
+		FC57E7282C64D18C00B4C2C5 /* Color+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extensions.swift"; sourceTree = "<group>"; };
+		FC57E72A2C64D1F300B4C2C5 /* UIApplication+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
+		FC57E72F2C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAnimateButtonView.swift; sourceTree = "<group>"; };
+		FC57E7312C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeLinkButtonView.swift; sourceTree = "<group>"; };
+		FC57E7332C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeResetButtonView.swift; sourceTree = "<group>"; };
+		FC57E7352C64E68B00B4C2C5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		FC57E7382C64F97B00B4C2C5 /* HealthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthScreen.swift; sourceTree = "<group>"; };
+		FC57E73B2C64F99D00B4C2C5 /* TrainingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingScreen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC57E70A2C64CEC200B4C2C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC57E7042C64CEC200B4C2C5 = {
+			isa = PBXGroup;
+			children = (
+				FC57E70F2C64CEC200B4C2C5 /* Fit365Log */,
+				FC57E70E2C64CEC200B4C2C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC57E70E2C64CEC200B4C2C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E70D2C64CEC200B4C2C5 /* Fit365Log.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC57E70F2C64CEC200B4C2C5 /* Fit365Log */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7262C64CFB900B4C2C5 /* Core */,
+				FC57E7242C64CF6400B4C2C5 /* Screens */,
+				FC57E7272C64CFF500B4C2C5 /* Components */,
+				FC57E7232C64CF5800B4C2C5 /* DataManager */,
+				FC57E7252C64CF6A00B4C2C5 /* Extensions */,
+				FC57E7162C64CEC400B4C2C5 /* Preview Content */,
+			);
+			path = Fit365Log;
+			sourceTree = "<group>";
+		};
+		FC57E7162C64CEC400B4C2C5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7172C64CEC400B4C2C5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC57E7232C64CF5800B4C2C5 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7192C64CEC400B4C2C5 /* Persistence.swift */,
+				FC57E71B2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		FC57E7242C64CF6400B4C2C5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E72C2C64D27D00B4C2C5 /* WelcomeScreen */,
+				FC57E7372C64F96600B4C2C5 /* HealthScreen */,
+				FC57E73A2C64F99000B4C2C5 /* TrainingScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FC57E7252C64CF6A00B4C2C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7282C64D18C00B4C2C5 /* Color+extensions.swift */,
+				FC57E72A2C64D1F300B4C2C5 /* UIApplication+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC57E7262C64CFB900B4C2C5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */,
+				FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FC57E7272C64CFF500B4C2C5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7352C64E68B00B4C2C5 /* AlertView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FC57E72C2C64D27D00B4C2C5 /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7122C64CEC200B4C2C5 /* WelcomeScreen.swift */,
+				FC57E72D2C64D28C00B4C2C5 /* Subview */,
+				FC57E72E2C64D29300B4C2C5 /* ViewModel */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		FC57E72D2C64D28C00B4C2C5 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E72F2C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift */,
+				FC57E7312C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift */,
+				FC57E7332C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		FC57E72E2C64D29300B4C2C5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC57E7372C64F96600B4C2C5 /* HealthScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7382C64F97B00B4C2C5 /* HealthScreen.swift */,
+			);
+			path = HealthScreen;
+			sourceTree = "<group>";
+		};
+		FC57E73A2C64F99000B4C2C5 /* TrainingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E73B2C64F99D00B4C2C5 /* TrainingScreen.swift */,
+			);
+			path = TrainingScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC57E70C2C64CEC200B4C2C5 /* Fit365Log */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC57E7202C64CEC400B4C2C5 /* Build configuration list for PBXNativeTarget "Fit365Log" */;
+			buildPhases = (
+				FC57E7092C64CEC200B4C2C5 /* Sources */,
+				FC57E70A2C64CEC200B4C2C5 /* Frameworks */,
+				FC57E70B2C64CEC200B4C2C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fit365Log;
+			productName = Fit365Log;
+			productReference = FC57E70D2C64CEC200B4C2C5 /* Fit365Log.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC57E7052C64CEC200B4C2C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					FC57E70C2C64CEC200B4C2C5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = FC57E7082C64CEC200B4C2C5 /* Build configuration list for PBXProject "Fit365Log" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC57E7042C64CEC200B4C2C5;
+			productRefGroup = FC57E70E2C64CEC200B4C2C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC57E70C2C64CEC200B4C2C5 /* Fit365Log */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC57E70B2C64CEC200B4C2C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC57E7182C64CEC400B4C2C5 /* Preview Assets.xcassets in Resources */,
+				FC57E7152C64CEC400B4C2C5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC57E7092C64CEC200B4C2C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC57E72B2C64D1F300B4C2C5 /* UIApplication+extension.swift in Sources */,
+				FC57E7342C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift in Sources */,
+				FC57E71A2C64CEC400B4C2C5 /* Persistence.swift in Sources */,
+				FC57E7302C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift in Sources */,
+				FC57E71D2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld in Sources */,
+				FC57E7362C64E68B00B4C2C5 /* AlertView.swift in Sources */,
+				FC57E7392C64F97B00B4C2C5 /* HealthScreen.swift in Sources */,
+				FC57E73C2C64F99D00B4C2C5 /* TrainingScreen.swift in Sources */,
+				FC57E7132C64CEC200B4C2C5 /* WelcomeScreen.swift in Sources */,
+				FC57E7292C64D18C00B4C2C5 /* Color+extensions.swift in Sources */,
+				FC57E7112C64CEC200B4C2C5 /* Fit365LogApp.swift in Sources */,
+				FC57E7322C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FC57E71E2C64CEC400B4C2C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC57E71F2C64CEC400B4C2C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC57E7212C64CEC400B4C2C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fit365Log/Preview Content\"";
+				DEVELOPMENT_TEAM = CTY44DYVYJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = blessthedevil.Fit365Log;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC57E7222C64CEC400B4C2C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fit365Log/Preview Content\"";
+				DEVELOPMENT_TEAM = CTY44DYVYJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = blessthedevil.Fit365Log;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC57E7082C64CEC200B4C2C5 /* Build configuration list for PBXProject "Fit365Log" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC57E71E2C64CEC400B4C2C5 /* Debug */,
+				FC57E71F2C64CEC400B4C2C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC57E7202C64CEC400B4C2C5 /* Build configuration list for PBXNativeTarget "Fit365Log" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC57E7212C64CEC400B4C2C5 /* Debug */,
+				FC57E7222C64CEC400B4C2C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FC57E71B2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC57E71C2C64CEC400B4C2C5 /* Fit365Log.xcdatamodel */,
+			);
+			currentVersion = FC57E71C2C64CEC400B4C2C5 /* Fit365Log.xcdatamodel */;
+			path = Fit365Log.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FC57E7052C64CEC200B4C2C5 /* Project object */;
+}

@@ -6,13 +6,12 @@ struct WelcomeAnimateButtonView: View {
     let title: String
     let description: String
     let animationType: AnimationType
-    @Binding var tapped: Bool
+    let onAnimationCompletion: () -> Void
     
     // Props for animating
     @State private var scale: CGFloat = 1.0
     @State private var offset: CGFloat = 0
     @State private var isAnimating = false
-    @State private var navigate = false
     
     enum AnimationType {
         case heart
@@ -22,7 +21,6 @@ struct WelcomeAnimateButtonView: View {
     var body: some View {
         Button {
             if !isAnimating {
-                tapped.toggle()
                 startAnimation()
             }
         } label: {
@@ -51,7 +49,6 @@ struct WelcomeAnimateButtonView: View {
     }
     
     private func startAnimation() {
-        
         isAnimating = true
         
         if animationType == .heart {
@@ -68,7 +65,7 @@ struct WelcomeAnimateButtonView: View {
                     }
                     isAnimating = false
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-                        navigate = true
+                        onAnimationCompletion()
                     }
                 }
             }
@@ -84,13 +81,14 @@ struct WelcomeAnimateButtonView: View {
                     }
                     isAnimating = false
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-                        navigate = true
+                        onAnimationCompletion()
                     }
                 }
             }
         }
     }
 }
+
 
 #Preview {
     WelcomeScreen()

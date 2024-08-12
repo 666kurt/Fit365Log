@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="HealthData" representedClassName=".HealthData" syncable="YES">
+        <attribute name="age" attributeType="String"/>
+        <attribute name="calories" attributeType="String"/>
+        <attribute name="diseases" attributeType="String"/>
+        <attribute name="heartRate" attributeType="String"/>
+        <attribute name="height" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="waist" attributeType="String"/>
+        <attribute name="weight" attributeType="String"/>
     </entity>
-    <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-    </elements>
+    <entity name="Task" representedClassName=".Task" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String"/>
+    </entity>
+    <entity name="Training" representedClassName=".Training" syncable="YES">
+        <attribute name="approaches" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="repetitions" attributeType="String"/>
+        <attribute name="restTime" attributeType="String"/>
+        <attribute name="trainingTime" attributeType="String"/>
+        <attribute name="weight" attributeType="String"/>
+    </entity>
 </model>

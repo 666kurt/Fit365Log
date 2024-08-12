@@ -10,9 +10,9 @@ struct WelcomeResetButtonView: View {
         } label: {
             HStack(spacing: 5) {
                 Image(systemName: "arrow.clockwise")
-                    .font(.title3).bold()
+                    .font(.title3.weight(.bold))
                 Text("Reset progress")
-                    .font(.body).bold()
+                    .font(.body.weight(.bold))
             }
             .frame(maxWidth: .infinity)
             .padding(12)

@@ -2,9 +2,12 @@ import SwiftUI
 
 struct WelcomeScreen: View {
     
+    @StateObject var healthViewModel = HealthViewModel()
+    @StateObject var trainingViewModel = TrainingViewModel()
+    
     @State private var showAlert: Bool = false
-    @State private var healthTapped: Bool = false
-    @State private var trainingTapped: Bool = false
+    @State private var navigateToHealth: Bool = false
+    @State private var navigateToTraining: Bool = false
     
     var body: some View {
         NavigationView {
@@ -19,16 +22,22 @@ struct WelcomeScreen: View {
                     tabButtonView
                 }
                 .padding(.vertical, 20)
-                .padding(.horizontal, 15)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                .background(Color.theme.background.main.ignoresSafeArea())
+                .customVStackStyle()
                 
                 if showAlert {
                     AlertView(showAlert: $showAlert,
                               title: "Reset progress",
                               description: "This will result in complete data loss, are you sure?",
-                              onReset: {})
+                              onReset: resetProgress)
                 }
+                
+                NavigationLink(destination: HealthScreen()
+                    .environmentObject(healthViewModel),
+                               isActive: $navigateToHealth) {}
+                
+                NavigationLink(destination: TrainingScreen()
+                    .environmentObject(trainingViewModel),
+                               isActive: $navigateToTraining) {}
             }
         }
     }
@@ -49,13 +58,17 @@ extension WelcomeScreen {
                                      title: "My\nHealth",
                                      description: "All the important health points are stored here.",
                                      animationType: .heart,
-                                     tapped: $healthTapped)
+                                     onAnimationCompletion: {
+                                         navigateToHealth = true
+                                     })
             
             WelcomeAnimateButtonView(emodji: "🚴🏼",
                                      title: "My\nTraining",
                                      description: "Proofread and record your workouts",
                                      animationType: .bike,
-                                     tapped: $trainingTapped)
+                                     onAnimationCompletion: {
+                                         navigateToTraining = true
+                                     })
         }
     }
     
@@ -68,7 +81,12 @@ extension WelcomeScreen {
         }
     }
     
+    private func resetProgress() {
+        healthViewModel.deleteAllData()
+        trainingViewModel.deleteAllTrainings()
+    }
 }
+
 
 #Preview {
     WelcomeScreen()

@@ -8,6 +8,9 @@ struct OnboardingScreen: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .bottom) {
+                
+                Color(hex: "#F9FFED").ignoresSafeArea()
+                
                 TabView(selection: $currentTab) {
                     
                     OnboardingStepView(image: "onboarding1",

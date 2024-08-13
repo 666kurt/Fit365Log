@@ -10,15 +10,17 @@ struct TrainingScreen: View {
             ToolBarView(label: "Add", action: { showNewTraining.toggle() })
             NavigationTitleView(title: "My training")
             
-            if trainingViewModel.trainings.isEmpty {
-                trainingEmptyView
-            } else {
-                ScrollView(showsIndicators: false) {
-                    ForEach(trainingViewModel.trainings, id: \.id) { training in
-                        TrainingRowView(training: training)
+            
+                if trainingViewModel.trainings.isEmpty {
+                    trainingEmptyView
+                } else {
+                    ScrollView(showsIndicators: false) {
+                        ForEach(trainingViewModel.trainings, id: \.id) { training in
+                            TrainingRowView(training: training)
+                        }
                     }
                 }
-            }
+                
             
         }
         .sheet(isPresented: $showNewTraining) {
@@ -37,7 +39,6 @@ struct TrainingScreen: View {
 extension TrainingScreen {
     private var trainingEmptyView: some View {
         VStack(spacing: 10) {
-            Spacer()
             Text("Your workouts")
                 .font(.title.weight(.bold))
                 .foregroundColor(Color.theme.text.main)
@@ -56,10 +57,8 @@ extension TrainingScreen {
                     .background(Color.theme.other.primary)
                     .clipShape(RoundedRectangle(cornerRadius: 25))
             }
-            Spacer()
-            Spacer()
         }
-        
+        .frame(maxHeight: .infinity)
     }
 }
 

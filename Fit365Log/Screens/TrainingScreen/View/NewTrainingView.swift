@@ -79,8 +79,6 @@ struct NewTrainingView: View {
         trainingViewModel.repetitions.isEmpty ||
         trainingViewModel.approaches.isEmpty ||
         trainingViewModel.weight.isEmpty ||
-        trainingViewModel.trainingSeconds == 0 ||
-        trainingViewModel.restSeconds == 0 ||
         trainingViewModel.desc.isEmpty
     }
 }

@@ -59,6 +59,7 @@ final class HealthViewModel: ObservableObject {
                 heartRate = data.heartRate
                 caloriesPerDay = data.calories
                 diseases = data.diseases
+                print("Health data fetched")
             }
         } catch {
             print("Error fetching user health: \(error)")
@@ -87,26 +88,25 @@ final class HealthViewModel: ObservableObject {
     }
     
     func deleteAllData() {
-            let taskFetchRequest: NSFetchRequest<NSFetchRequestResult> = Task.fetchRequest()
-            let taskDeleteRequest = NSBatchDeleteRequest(fetchRequest: taskFetchRequest)
+        let taskFetchRequest: NSFetchRequest<NSFetchRequestResult> = Task.fetchRequest()
+        let taskDeleteRequest = NSBatchDeleteRequest(fetchRequest: taskFetchRequest)
+        
+        let healthDataFetchRequest: NSFetchRequest<NSFetchRequestResult> = HealthData.fetchRequest()
+        let healthDataDeleteRequest = NSBatchDeleteRequest(fetchRequest: healthDataFetchRequest)
+        
+        do {
+            try viewContext.execute(taskDeleteRequest)
+            try viewContext.execute(healthDataDeleteRequest)
             
-            let healthDataFetchRequest: NSFetchRequest<NSFetchRequestResult> = HealthData.fetchRequest()
-            let healthDataDeleteRequest = NSBatchDeleteRequest(fetchRequest: healthDataFetchRequest)
-            
-            do {
-                try viewContext.execute(taskDeleteRequest)
-                try viewContext.execute(healthDataDeleteRequest)
-                
-                try viewContext.save()
-                viewContext.reset()
-                
-                fetchTasks()
-                fetchHealthData()
-            } catch {
-                print("Error deleting all data: \(error)")
-            }
-        }
+            viewContext.reset()
 
+            fetchTasks()
+            fetchHealthData()
+        } catch {
+            print("Error deleting all data: \(error)")
+        }
+    }
+    
     
     private func saveContext() {
         do {

@@ -13,16 +13,16 @@ struct WelcomeScreen: View {
         NavigationView {
             ZStack {
                 VStack {
+                    
                     titleView
                     
                     animateButtonView
-                    
-                    Spacer()
-                    
                     tabButtonView
+                    
                 }
                 .padding(.vertical, 20)
                 .customVStackStyle()
+                
                 
                 if showAlert {
                     AlertView(showAlert: $showAlert,
@@ -39,7 +39,11 @@ struct WelcomeScreen: View {
                     .environmentObject(trainingViewModel),
                                isActive: $navigateToTraining) {}
             }
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        
     }
 }
 
@@ -59,17 +63,18 @@ extension WelcomeScreen {
                                      description: "All the important health points are stored here.",
                                      animationType: .heart,
                                      onAnimationCompletion: {
-                                         navigateToHealth = true
-                                     })
+                navigateToHealth = true
+            })
             
             WelcomeAnimateButtonView(emodji: "🚴🏼",
                                      title: "My\nTraining",
                                      description: "Proofread and record your workouts",
                                      animationType: .bike,
                                      onAnimationCompletion: {
-                                         navigateToTraining = true
-                                     })
+                navigateToTraining = true
+            })
         }
+        .frame(maxHeight: .infinity, alignment: .top)
     }
     
     private var tabButtonView: some View {

@@ -8,29 +8,32 @@ struct SplashScreen: View {
     let persistenceController: PersistenceController
     
     var body: some View {
-        ZStack {
-            
-            Color.theme.background.main.ignoresSafeArea()
-            
-            
-            VStack(spacing: 100) {
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
+        GeometryReader { geometry in
+            ZStack {
                 
-                ZStack(alignment: .leading) {
-                    Rectangle()
-                        .frame(height: 15)
-                        .foregroundColor(Color(hex: "#272727"))
-                    Rectangle()
-                        .frame(width: progress, height: 15)
-                        .foregroundColor(Color.theme.text.second)
-                        .animation(.linear(duration: 0.5), value: progress)
+                Color.theme.background.main.ignoresSafeArea()
+                
+                VStack(spacing: 100) {
+                    Image("logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: geometry.size.width * 0.6)
+                    
+                    ZStack(alignment: .leading) {
+                        Rectangle()
+                            .frame(height: 15)
+                            .foregroundColor(Color(hex: "#272727"))
+                        
+                        Rectangle()
+                            .frame(width: progress, height: 15)
+                            .foregroundColor(Color.theme.text.second)
+                            .animation(.linear(duration: 0.05), value: progress)
+                    }
+                    .cornerRadius(10)
+                    .frame(width: geometry.size.width * 0.8)
                 }
-                .cornerRadius(10)
-                .padding(.horizontal, 50)
+                .padding(.horizontal, 20)
             }
-            
         }
         .onAppear {
             startLoading()
@@ -47,7 +50,7 @@ struct SplashScreen: View {
     
     func startLoading() {
         Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
-            if progress < 300 {
+            if progress < UIScreen.main.bounds.width * 0.8 {
                 progress += 8
             } else {
                 timer.invalidate()
@@ -56,6 +59,7 @@ struct SplashScreen: View {
         }
     }
 }
+
 
 #Preview {
     SplashScreen(showOnboarding: .constant(true),

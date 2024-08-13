@@ -24,7 +24,6 @@ struct WelcomeAnimateButtonView: View {
                 startAnimation()
             }
         } label: {
-            GeometryReader { geo in
                 VStack(spacing: 10) {
                     Text(emodji)
                         .font(.system(size: 70))
@@ -40,11 +39,10 @@ struct WelcomeAnimateButtonView: View {
                         .lineLimit(2)
                 }
                 .multilineTextAlignment(.center)
-                .frame(maxWidth: geo.size.width, maxHeight: geo.size.height * 0.6)
+                .frame(maxWidth: .infinity)
                 .padding(10)
                 .background(Color.theme.text.second)
                 .clipShape(RoundedRectangle(cornerRadius: 25))
-            }
         }
     }
     
@@ -70,11 +68,12 @@ struct WelcomeAnimateButtonView: View {
                 }
             }
         } else if animationType == .bike {
+            let maxOffset = UIScreen.main.bounds.width / 2
             withAnimation(.linear(duration: 0.5)) {
-                offset = -125
+                offset = -maxOffset
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                offset = 125
+                offset = maxOffset
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     withAnimation(.linear(duration: 0.5)) {
                         offset = 0
@@ -91,5 +90,10 @@ struct WelcomeAnimateButtonView: View {
 
 
 #Preview {
+//    WelcomeAnimateButtonView(emodji: "❤️",
+//                             title: "My\nHealth",
+//                             description: "All the important health points are stored here.",
+//                             animationType: .heart,
+//                             onAnimationCompletion: {})
     WelcomeScreen()
 }

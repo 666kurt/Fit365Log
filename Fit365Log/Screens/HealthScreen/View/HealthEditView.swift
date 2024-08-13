@@ -41,13 +41,13 @@ struct HealthEditView: View {
     }
     
     private var isDisabled: Bool {
-        return name.isEmpty &&
-        age.isEmpty &&
-        weight.isEmpty &&
-        height.isEmpty &&
-        waist.isEmpty &&
-        heartRate.isEmpty &&
-        caloriesPerDay.isEmpty &&
+        return name.isEmpty ||
+        age.isEmpty ||
+        weight.isEmpty ||
+        height.isEmpty ||
+        waist.isEmpty ||
+        heartRate.isEmpty ||
+        caloriesPerDay.isEmpty ||
         diseases.isEmpty
     }
     

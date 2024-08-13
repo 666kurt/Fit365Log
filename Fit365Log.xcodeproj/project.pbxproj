@@ -145,12 +145,7 @@
 		FC57E7232C64CF5800B4C2C5 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				FC57E77B2C6A121F00B4C2C5 /* Trainings+CoreDataClass.swift */,
-				FC57E77C2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift */,
-				FC57E7602C69F5C400B4C2C5 /* HealthData+CoreDataClass.swift */,
-				FC57E7612C69F5C400B4C2C5 /* HealthData+CoreDataProperties.swift */,
-				FC57E7562C69ED2000B4C2C5 /* Task+CoreDataClass.swift */,
-				FC57E7572C69ED2000B4C2C5 /* Task+CoreDataProperties.swift */,
+				FC8E92372C6B5E24006F7E03 /* subclasses */,
 				FC57E7192C64CEC400B4C2C5 /* Persistence.swift */,
 				FC57E71B2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld */,
 			);
@@ -277,6 +272,19 @@
 				FC57E7882C6A447A00B4C2C5 /* SplashScreen.swift */,
 			);
 			path = "Onboarding&Splash";
+			sourceTree = "<group>";
+		};
+		FC8E92372C6B5E24006F7E03 /* subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E77B2C6A121F00B4C2C5 /* Trainings+CoreDataClass.swift */,
+				FC57E77C2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift */,
+				FC57E7602C69F5C400B4C2C5 /* HealthData+CoreDataClass.swift */,
+				FC57E7612C69F5C400B4C2C5 /* HealthData+CoreDataProperties.swift */,
+				FC57E7562C69ED2000B4C2C5 /* Task+CoreDataClass.swift */,
+				FC57E7572C69ED2000B4C2C5 /* Task+CoreDataProperties.swift */,
+			);
+			path = subclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,30 +8,32 @@ struct HealthScreen: View {
     @State private var showEditSheet: Bool = false
     
     var body: some View {
-        VStack {
-            ToolBarView(label: "Edit", action: { showEditSheet.toggle() })
-            NavigationTitleView(title: "My Health")
-            
-            staticticsView
-            
-            taskView
-            
-            if healthViewModel.tasks.isEmpty {
-                Text("Write down your tasks and\naccomplish them")
-                    .font(.callout)
-                    .foregroundColor(Color.theme.text.notActive)
-                    .frame(maxHeight: .infinity)
-                    .multilineTextAlignment(.center)
-            } else {
+            VStack {
+                ToolBarView(label: "Edit", action: { showEditSheet.toggle() })
+                NavigationTitleView(title: "My Health")
+                
                 ScrollView(showsIndicators: false) {
-                    ForEach(healthViewModel.tasks, id: \.id) { task in
-                        TaskRowView(title: task.title, action: {
-                            healthViewModel.deleteTask(task: task)
-                        })
+                staticticsView
+                
+                taskView
+                
+                if healthViewModel.tasks.isEmpty {
+                    Text("Write down your tasks and\naccomplish them")
+                        .font(.callout)
+                        .foregroundColor(Color.theme.text.notActive)
+                        .frame(maxHeight: .infinity)
+                        .multilineTextAlignment(.center)
+                } else {
+                    ScrollView(showsIndicators: false) {
+                        ForEach(healthViewModel.tasks, id: \.id) { task in
+                            TaskRowView(title: task.title, action: {
+                                healthViewModel.deleteTask(task: task)
+                            })
+                        }
                     }
                 }
+                
             }
-            
         }
         .sheet(isPresented: $showTaskSheet) {
             CustomSheet(title: "New tasks") {

@@ -8,21 +8,20 @@ struct WelcomeScreen: View {
     @State private var showAlert: Bool = false
     @State private var navigateToHealth: Bool = false
     @State private var navigateToTraining: Bool = false
+    @State private var isLandscape: Bool = false
     
     var body: some View {
         NavigationView {
             ZStack {
-                VStack {
-                    
-                    titleView
-                    
-                    animateButtonView
-                    tabButtonView
-                    
+                if isLandscape {
+                    ScrollView {
+                        content
+                    }
+                    .padding(.vertical, 20)
+                    .customVStackStyle()
+                } else {
+                    content
                 }
-                .padding(.vertical, 20)
-                .customVStackStyle()
-                
                 
                 if showAlert {
                     AlertView(showAlert: $showAlert,
@@ -33,21 +32,35 @@ struct WelcomeScreen: View {
                 
                 NavigationLink(destination: HealthScreen()
                     .environmentObject(healthViewModel),
-                               isActive: $navigateToHealth) {}
+                               isActive: $navigateToHealth) {
+                    EmptyView()
+                }.hidden()
                 
                 NavigationLink(destination: TrainingScreen()
                     .environmentObject(trainingViewModel),
-                               isActive: $navigateToTraining) {}
+                               isActive: $navigateToTraining) {
+                    EmptyView()
+                }.hidden()
             }
             .navigationTitle("")
             .navigationBarHidden(true)
+            .orientationReader(isLandscape: $isLandscape)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        
     }
 }
 
 extension WelcomeScreen {
+    
+    private var content: some View {
+        VStack {
+            titleView
+            animateButtonView
+            tabButtonView
+        }
+        .padding(.vertical, 20)
+        .customVStackStyle()
+    }
     
     private var titleView: some View {
         Text("Welcome to\nFit365Log")
@@ -87,10 +100,12 @@ extension WelcomeScreen {
     }
     
     private func resetProgress() {
-        healthViewModel.deleteAllData()
+        healthViewModel.deleteUserData()
+        healthViewModel.deleteAllTasks()
         trainingViewModel.deleteAllTrainings()
     }
 }
+
 
 
 #Preview {

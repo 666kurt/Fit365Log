@@ -40,6 +40,23 @@ final class HealthViewModel: ObservableObject {
         taskLabel = ""
     }
     
+    func deleteAllTasks() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Task.fetchRequest()
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try viewContext.execute(deleteRequest)
+            viewContext.reset()
+            
+            fetchTasks()
+
+        } catch {
+            print("Error deleting all tasks: \(error)")
+        }
+    }
+
+
+    
     func deleteTask(task: Task) {
         viewContext.delete(task)
         saveContext()
@@ -51,15 +68,14 @@ final class HealthViewModel: ObservableObject {
         do {
             let healthData = try viewContext.fetch(request)
             if let data = healthData.first {
-                name = data.name
-                age = data.age
-                weight = data.weight
-                height = data.height
-                waist = data.waist
-                heartRate = data.heartRate
-                caloriesPerDay = data.calories
-                diseases = data.diseases
-                print("Health data fetched")
+                self.name = data.name
+                self.age = data.age
+                self.weight = data.weight
+                self.height = data.height
+                self.waist = data.waist
+                self.heartRate = data.heartRate
+                self.caloriesPerDay = data.calories
+                self.diseases = data.diseases
             }
         } catch {
             print("Error fetching user health: \(error)")
@@ -87,26 +103,29 @@ final class HealthViewModel: ObservableObject {
         }
     }
     
-    func deleteAllData() {
-        let taskFetchRequest: NSFetchRequest<NSFetchRequestResult> = Task.fetchRequest()
-        let taskDeleteRequest = NSBatchDeleteRequest(fetchRequest: taskFetchRequest)
-        
-        let healthDataFetchRequest: NSFetchRequest<NSFetchRequestResult> = HealthData.fetchRequest()
-        let healthDataDeleteRequest = NSBatchDeleteRequest(fetchRequest: healthDataFetchRequest)
+    func deleteUserData() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = HealthData.fetchRequest()
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         
         do {
-            try viewContext.execute(taskDeleteRequest)
-            try viewContext.execute(healthDataDeleteRequest)
-            
+            try viewContext.execute(deleteRequest)
             viewContext.reset()
-
-            fetchTasks()
+            
+            name = ""
+            age = ""
+            weight = ""
+            height = ""
+            waist = ""
+            heartRate = ""
+            caloriesPerDay = ""
+            diseases = ""
+            
             fetchHealthData()
         } catch {
-            print("Error deleting all data: \(error)")
+            print("Error deleting user data: \(error)")
         }
     }
-    
+
     
     private func saveContext() {
         do {

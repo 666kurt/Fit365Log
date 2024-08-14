@@ -20,6 +20,9 @@ struct CustomSheet<Content: View>: View {
             content
         }
         .customVStackStyle()
+        .onTapGesture {
+            UIApplication.shared.endEditing(true)
+        }
     }
 
 }

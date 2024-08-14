@@ -8,13 +8,12 @@ struct HealthScreen: View {
     @State private var showEditSheet: Bool = false
     
     var body: some View {
-            VStack {
-                ToolBarView(label: "Edit", action: { showEditSheet.toggle() })
-                NavigationTitleView(title: "My Health")
-                
-                ScrollView(showsIndicators: false) {
+        VStack {
+            ToolBarView(label: "Edit", action: { showEditSheet.toggle() })
+            NavigationTitleView(title: "My Health")
+            
+            ScrollView(showsIndicators: false) {
                 staticticsView
-                
                 taskView
                 
                 if healthViewModel.tasks.isEmpty {
@@ -32,7 +31,6 @@ struct HealthScreen: View {
                         }
                     }
                 }
-                
             }
         }
         .sheet(isPresented: $showTaskSheet) {
@@ -62,9 +60,6 @@ struct HealthScreen: View {
         }
         .customVStackStyle()
     }
-}
-
-extension HealthScreen {
     
     private var staticticsView: some View {
         VStack(spacing: 16) {
@@ -90,7 +85,6 @@ extension HealthScreen {
                            value: healthViewModel.diseases.isEmpty ? "no data" : healthViewModel.diseases)
         }
     }
-
     
     private var taskView: some View {
         HStack {
@@ -106,8 +100,8 @@ extension HealthScreen {
         .foregroundColor(Color.theme.text.main)
         .padding(.vertical, 15)
     }
-    
 }
+
 
 #Preview {
     HealthScreen()

@@ -47,6 +47,7 @@
 		FC57E7852C6A444400B4C2C5 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7842C6A444400B4C2C5 /* OnboardingStepView.swift */; };
 		FC57E7872C6A446000B4C2C5 /* OnboardingTabIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7862C6A446000B4C2C5 /* OnboardingTabIndicator.swift */; };
 		FC57E7892C6A447A00B4C2C5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7882C6A447A00B4C2C5 /* SplashScreen.swift */; };
+		FC8E92392C6CA565006F7E03 /* OrientationReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E92382C6CA565006F7E03 /* OrientationReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		FC57E7842C6A444400B4C2C5 /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
 		FC57E7862C6A446000B4C2C5 /* OnboardingTabIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabIndicator.swift; sourceTree = "<group>"; };
 		FC57E7882C6A447A00B4C2C5 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		FC8E92382C6CA565006F7E03 /* OrientationReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				FC57E7422C66096900B4C2C5 /* CustomVStackModifier.swift */,
+				FC8E92382C6CA565006F7E03 /* OrientationReader.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				FC57E75B2C69ED9400B4C2C5 /* HealthViewModel.swift in Sources */,
 				FC57E7582C69ED2000B4C2C5 /* Task+CoreDataClass.swift in Sources */,
 				FC57E7412C66075400B4C2C5 /* NavigationTitleView.swift in Sources */,
+				FC8E92392C6CA565006F7E03 /* OrientationReader.swift in Sources */,
 				FC57E7632C69F5C400B4C2C5 /* HealthData+CoreDataProperties.swift in Sources */,
 				FC57E74A2C66156E00B4C2C5 /* TextFieldView.swift in Sources */,
 				FC57E7592C69ED2000B4C2C5 /* Task+CoreDataProperties.swift in Sources */,
@@ -550,7 +554,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -584,7 +588,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

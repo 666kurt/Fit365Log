@@ -4,8 +4,6 @@ import SwiftUI
 
 final class TrainingViewModel: ObservableObject {
     
-    @Published var trainings: [Training] = []
-    
     @Published var name: String = ""
     @Published var repetitions: String = ""
     @Published var approaches: String = ""
@@ -16,6 +14,8 @@ final class TrainingViewModel: ObservableObject {
     @Published var restSeconds: Int = 0
     @Published var desc: String = ""
     @Published var id: UUID?
+    
+    @Published var trainings: [Training] = []
     
     private let viewContext = PersistenceController.shared.container.viewContext
     
@@ -63,17 +63,17 @@ final class TrainingViewModel: ObservableObject {
     }
     
     func deleteAllTrainings() {
-           let request: NSFetchRequest<NSFetchRequestResult> = Training.fetchRequest()
-           let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
-           
-           do {
-               try viewContext.execute(deleteRequest)
-               try viewContext.save()
-               fetchTrainings()
-           } catch {
-               print("Error deleting trainings: \(error)")
-           }
-       }
+        let request: NSFetchRequest<NSFetchRequestResult> = Training.fetchRequest()
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+        
+        do {
+            try viewContext.execute(deleteRequest)
+            try viewContext.save()
+            fetchTrainings()
+        } catch {
+            print("Error deleting trainings: \(error)")
+        }
+    }
     
     private func saveContext() {
         do {

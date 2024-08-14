@@ -7,7 +7,7 @@ struct TrainingScreen: View {
     
     var body: some View {
         VStack {
-            ToolBarView(label: "Add", action: { showNewTraining.toggle() })
+            ToolBarView(label: hasAdd, action: { showNewTraining.toggle() })
             NavigationTitleView(title: "My training")
             
             
@@ -33,6 +33,10 @@ struct TrainingScreen: View {
             trainingViewModel.fetchTrainings()
         }
         .customVStackStyle()
+    }
+    
+    private var hasAdd: String {
+        return !trainingViewModel.trainings.isEmpty ? "Add" : ""
     }
 }
 

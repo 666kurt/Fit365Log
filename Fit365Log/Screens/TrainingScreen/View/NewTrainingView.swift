@@ -52,6 +52,7 @@ struct NewTrainingView: View {
                                        minutes: $trainingViewModel.restMinutes,
                                        seconds: $trainingViewModel.restSeconds)
                     }
+                    .padding(.horizontal, 4)
                     
                     TextFieldView(placeholder: "Description",
                                   text: $trainingViewModel.desc)

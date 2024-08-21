@@ -5,14 +5,6 @@ struct NewTrainingView: View {
     @EnvironmentObject var trainingViewModel: TrainingViewModel
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var showTimePicker: Bool = false
-    @State private var timePickerType: TimePickerType? = .training
-    
-    enum TimePickerType {
-        case training
-        case rest
-    }
-    
     var body: some View {
         ScrollView(showsIndicators: false) {
             ZStack(alignment: .bottom) {
@@ -21,69 +13,87 @@ struct NewTrainingView: View {
                     TextFieldView(placeholder: "Name",
                                   text: $trainingViewModel.name)
                     
-                    TextFieldView(placeholder: "Repetitions",
-                                  text: $trainingViewModel.repetitions)
-                    .keyboardType(.numberPad)
+                    tagTextField
                     
-                    TextFieldView(placeholder: "Approaches",
-                                  text: $trainingViewModel.approaches)
-                    .keyboardType(.numberPad)
+                    TextFieldView(placeholder: "Core muscle",
+                                  text: $trainingViewModel.coreMuscle)
                     
-                    TextFieldView(placeholder: "Weight",
-                                  text: $trainingViewModel.weight)
-                    .keyboardType(.numberPad)
-                    
-                    HStack {
-                        TimePickerView(title: "Training time",
-                                       showPicker: {
-                            timePickerType = .training
-                            showTimePicker.toggle()
-                        },
-                                       minutes: $trainingViewModel.trainingMinutes,
-                                       seconds: $trainingViewModel.trainingSeconds)
-                        
-                        Spacer()
-                        
-                        TimePickerView(title: "Rest time",
-                                       showPicker: {
-                            timePickerType = .rest
-                            showTimePicker.toggle()
-                        },
-                                       minutes: $trainingViewModel.restMinutes,
-                                       seconds: $trainingViewModel.restSeconds)
-                    }
-                    .padding(.horizontal, 4)
+                    TextFieldView(placeholder: "Secondary muscles",
+                                  text: $trainingViewModel.secondaryMuscles)
                     
                     TextFieldView(placeholder: "Description",
                                   text: $trainingViewModel.desc)
                     
                     ButtonView(title: "Save", disabled: isDisabled, action: {
-                        trainingViewModel.addTraining()
-                        presentationMode.wrappedValue.dismiss()
+                        saveTraining()
                     })
                 }
             }
         }
-        .sheet(isPresented: $showTimePicker) {
-            if let timePickerType = timePickerType {
-                TimePickerSheet(
-                    minutes: timePickerType == .training ? $trainingViewModel.trainingMinutes : $trainingViewModel.restMinutes,
-                    seconds: timePickerType == .training ? $trainingViewModel.trainingSeconds : $trainingViewModel.restSeconds,
-                    onDismiss: { showTimePicker = false }
-                )
-            }
-        }
+    }
+    
+    private func saveTraining() {
+        
+        let red = Double(trainingViewModel.tagColor.components.r)
+        let green = Double(trainingViewModel.tagColor.components.g)
+        let blue = Double(trainingViewModel.tagColor.components.b)
+        let alpha = Double(trainingViewModel.tagColor.components.a)
+        
+        
+        trainingViewModel.addTraining(alpha: alpha, red: red, green: green, blue: blue)
+        presentationMode.wrappedValue.dismiss()
     }
     
     private var isDisabled: Bool {
         return trainingViewModel.name.isEmpty ||
-        trainingViewModel.repetitions.isEmpty ||
-        trainingViewModel.approaches.isEmpty ||
-        trainingViewModel.weight.isEmpty ||
+        trainingViewModel.tag.isEmpty ||
+        trainingViewModel.coreMuscle.isEmpty ||
+        trainingViewModel.secondaryMuscles.isEmpty ||
         trainingViewModel.desc.isEmpty
     }
 }
 
+
+extension NewTrainingView {
+    
+    private var tagTextField: some View {
+        
+        HStack(alignment: .center, spacing: 5) {
+            HStack(spacing: 15) {
+                Text("Tag")
+                    .font(.body.weight(.semibold))
+                    .foregroundColor(Color.theme.text.main)
+                
+                Text("#")
+                    .foregroundColor(Color.theme.background.second)
+            }
+            
+            ZStack(alignment: .leading) {
+                if trainingViewModel.tag.isEmpty {
+                    Text("Choose")
+                        .font(.callout)
+                        .foregroundColor(
+                            trainingViewModel.tag.isEmpty ? Color.theme.text.notActive : Color.theme.text.main
+                        )
+                }
+                HStack {
+                    TextField("", text: $trainingViewModel.tag)
+                        .autocorrectionDisabled()
+                    ColorPicker("", selection: $trainingViewModel.tagColor)
+                        .frame(width: 30)
+                }
+                
+                
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .foregroundColor(Color.theme.text.main)
+        .background(Color.theme.background.light)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+    
+}
 
 #Preview {
     NewTrainingView()

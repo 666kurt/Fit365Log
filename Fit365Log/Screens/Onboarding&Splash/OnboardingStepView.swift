@@ -13,7 +13,12 @@ struct OnboardingStepView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: geometry.size.width, height: geometry.size.height)
-                    .scaleEffect(1.1)
+                
+                Image("leaf")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .ignoresSafeArea()
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text(title)

@@ -15,13 +15,15 @@
         <attribute name="title" attributeType="String"/>
     </entity>
     <entity name="Training" representedClassName=".Training" syncable="YES">
-        <attribute name="approaches" attributeType="String"/>
+        <attribute name="alpha" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="blue" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="coreMuscle" attributeType="String"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="green" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
-        <attribute name="repetitions" attributeType="String"/>
-        <attribute name="restTime" attributeType="String"/>
-        <attribute name="trainingTime" attributeType="String"/>
-        <attribute name="weight" attributeType="String"/>
+        <attribute name="red" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="secondaryMuscles" attributeType="String"/>
+        <attribute name="tag" attributeType="String"/>
     </entity>
 </model>

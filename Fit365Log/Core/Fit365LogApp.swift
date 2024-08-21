@@ -2,6 +2,7 @@ import SwiftUI
 
 @main
 struct Fit365LogApp: App {
+    
     let persistenceController = PersistenceController.shared
     
     @State private var showOnboarding = UserDefaults.standard.bool(forKey: "hasSeenOnboarding") == false

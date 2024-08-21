@@ -9,12 +9,14 @@ extension Training {
     }
 
     @NSManaged public var name: String
-    @NSManaged public var repetitions: String
-    @NSManaged public var approaches: String
-    @NSManaged public var weight: String
-    @NSManaged public var trainingTime: String
-    @NSManaged public var restTime: String
+    @NSManaged public var coreMuscle: String
+    @NSManaged public var secondaryMuscles: String
     @NSManaged public var desc: String
+    @NSManaged public var tag: String
+    @NSManaged public var alpha: Double
+    @NSManaged public var red: Double
+    @NSManaged public var green: Double
+    @NSManaged public var blue: Double
     @NSManaged public var id: UUID?
 
 }

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TrainingRowStatsView: View {
+struct WorkoutRowStatsView: View {
     
     let value: String
     let name: String
@@ -10,7 +10,6 @@ struct TrainingRowStatsView: View {
             Text(name)
                 .font(.subheadline)
                 .foregroundColor(Color.theme.background.second)
-                .lineLimit(1)
             
             Text(value)
                 .font(.title3.weight(.semibold))
@@ -22,32 +21,28 @@ struct TrainingRowStatsView: View {
     
 }
 
-struct TrainingRowView: View {
+struct WorkoutRowView: View {
     
-    let training: Training
+    let workout: Workout
     
     var body: some View {
         VStack(spacing: 15) {
             
             
             HStack {
-                Text(training.name)
+                Text(workout.name)
                     .font(.subheadline.weight(.semibold))
                     .foregroundColor(Color.theme.text.main)
-                    .frame(maxWidth: UIScreen.main.bounds.width / 2 - 50, alignment: .leading)
-                    .lineLimit(1)
                 
                 Spacer()
                 
-                Text("#\(training.tag)")
+                Text("#\(workout.bodyPart)")
                     .font(.headline)
-                    .foregroundColor(Color(red: training.red, green: training.green, blue: training.blue))
-                    .frame(maxWidth: UIScreen.main.bounds.width / 2 - 50, alignment: .trailing)
-                    .lineLimit(1)
+                    .foregroundColor(Color(hex: "#3EAF49"))
             }
             
             HStack(spacing: 0) {
-                TrainingRowStatsView(value: training.coreMuscle,
+                TrainingRowStatsView(value: workout.target,
                                      name: "Core muscle")
                 
                 Spacer()
@@ -56,16 +51,16 @@ struct TrainingRowView: View {
                     .foregroundColor(Color.theme.background.second)
                 Spacer()
                 
-                TrainingRowStatsView(value: training.secondaryMuscles,
+                TrainingRowStatsView(value: workout.secondaryMuscles[0],
                                      name: "Secondary muscles")
                 
             }
             
             VStack(alignment: .leading, spacing: 5) {
-                Text("Description")
+                Text("Instructions")
                     .font(.callout.weight(.semibold))
                     .foregroundColor(Color.theme.text.main)
-                Text(training.desc)
+                Text(workout.instructions[0])
                     .lineLimit(2)
                     .font(.footnote)
                     .foregroundColor(Color.theme.background.second)
@@ -81,23 +76,4 @@ struct TrainingRowView: View {
         
     }
     
-}
-
-#Preview {
-    
-    let context = PersistenceController.preview.container.viewContext
-    let sampleTraining = Training(context: context)
-    sampleTraining.name = "Pull-push +legs"
-    sampleTraining.tag = "cardio"
-    sampleTraining.coreMuscle = "Gluteus maximus"
-    sampleTraining.secondaryMuscles = "Calf muscle"
-    sampleTraining.desc = "Description"
-    sampleTraining.red = 0
-    sampleTraining.green = 240
-    sampleTraining.blue = 0
-    
-    return TrainingRowView(training: sampleTraining)
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.theme.background.main)
 }

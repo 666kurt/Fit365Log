@@ -41,6 +41,7 @@ struct WelcomeScreen: View {
                                isActive: $navigateToTraining) {
                     EmptyView()
                 }.hidden()
+                
             }
             .navigationTitle("")
             .navigationBarHidden(true)
@@ -92,11 +93,18 @@ extension WelcomeScreen {
     
     private var tabButtonView: some View {
         VStack(spacing: 20) {
-            WelcomeLinkButtonView(image: "bubble.fill", title: "Contact us")
-            WelcomeLinkButtonView(image: "list.bullet.rectangle.portrait", title: "Terms of use")
-            WelcomeLinkButtonView(image: "shield.fill", title: "Privacy")
+            WelcomeLinkButtonView(image: "bubble.fill",
+                                  title: "Contact us",
+                                  url: "https://www.termsfeed.com/live/21eb4e40-4d76-4864-89d9-2b930589e845")
+            WelcomeLinkButtonView(image: "list.bullet.rectangle.portrait",
+                                  title: "Terms of use",
+                                  url: "https://www.termsfeed.com/live/21eb4e40-4d76-4864-89d9-2b930589e845")
+            WelcomeLinkButtonView(image: "shield.fill", 
+                                  title: "Privacy",
+                                  url: "https://www.termsfeed.com/live/c4aeddd3-fed2-4c48-b24a-f47c4e040f3f")
             WelcomeResetButtonView(showAlert: $showAlert)
         }
+        .padding(.top, 16)
     }
     
     private func resetProgress() {
@@ -105,8 +113,6 @@ extension WelcomeScreen {
         trainingViewModel.deleteAllTrainings()
     }
 }
-
-
 
 #Preview {
     WelcomeScreen()

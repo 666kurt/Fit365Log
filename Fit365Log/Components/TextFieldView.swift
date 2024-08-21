@@ -20,6 +20,7 @@ struct TextFieldView: View {
                         )
                 }
                 TextField("", text: $text)
+                
             }
         }
         .padding(.horizontal, 16)
@@ -27,7 +28,6 @@ struct TextFieldView: View {
         .foregroundColor(Color.theme.text.main)
         .background(Color.theme.background.light)
         .clipShape(RoundedRectangle(cornerRadius: 10))
-
     }
 }
 

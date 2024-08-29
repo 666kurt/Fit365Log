@@ -10,7 +10,7 @@ struct AlertView: View {
     var body: some View {
         ZStack {
             
-            Color.black.opacity(0.5).edgesIgnoringSafeArea(.all)
+            Color.black.opacity(0.4).edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 0) {
                 Text(title)
@@ -56,7 +56,7 @@ struct AlertView: View {
             .zIndex(1)
             .frame(maxWidth: 270, alignment: .center)
             .background(
-                Color(hex: "#252525")
+                Color(hex: "#B3B3B3")
             )
             .clipShape(RoundedRectangle(cornerRadius: 14))
         }

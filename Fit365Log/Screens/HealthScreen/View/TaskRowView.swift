@@ -20,6 +20,7 @@ struct TaskRowView: View {
                         .padding(.vertical, 10)
                         .background(Color.theme.other.primary)
                         .clipShape(RoundedRectangle(cornerRadius: 25))
+                        .foregroundColor(.white)
                 }
             }
             .foregroundColor(Color.theme.text.main)

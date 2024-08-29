@@ -12,12 +12,21 @@ final class TrainingViewModel: ObservableObject {
     @Published var tagColor: Color = .red
     @Published var id: UUID?
     
+    @Published var lastAchievementDate: Date? {
+        didSet {
+            if let date = lastAchievementDate {
+                UserDefaults.standard.set(date, forKey: "lastAchievementDate")
+            }
+        }
+    }
+    
     @Published var trainings: [Training] = []
     
     private let viewContext = PersistenceController.shared.container.viewContext
     
     init() {
         fetchTrainings()
+        loadLastAchievementDate()
     }
     
     func fetchTrainings() {
@@ -41,6 +50,7 @@ final class TrainingViewModel: ObservableObject {
         newTraining.green = green
         newTraining.blue = blue
         newTraining.id = UUID()
+        newTraining.date = Date()
         saveContext()
         resetFields()
     }
@@ -61,9 +71,42 @@ final class TrainingViewModel: ObservableObject {
         do {
             try viewContext.execute(deleteRequest)
             try viewContext.save()
+            self.lastAchievementDate = nil
             fetchTrainings()
         } catch {
             print("Error deleting trainings: \(error)")
+        }
+    }
+    
+    func consecutiveTrainingDays() -> Int {
+        let sortedTrainings = trainings.compactMap { $0.date }.sorted(by: { $0 > $1 })
+        
+        guard let mostRecentDate = sortedTrainings.first else {
+            return 0
+        }
+        
+        var consecutiveDays = 0
+        var currentDate = mostRecentDate
+        
+        for date in sortedTrainings {
+            if Calendar.current.isDate(date, inSameDayAs: currentDate) {
+                continue
+            }
+            
+            if Calendar.current.isDate(date, inSameDayAs: Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!) {
+                consecutiveDays += 1
+                currentDate = date
+            } else {
+                break
+            }
+        }
+        
+        return consecutiveDays + 1
+    }
+    
+    private func loadLastAchievementDate() {
+        if let savedDate = UserDefaults.standard.object(forKey: "lastAchievementDate") as? Date {
+            lastAchievementDate = savedDate
         }
     }
     

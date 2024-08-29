@@ -12,7 +12,7 @@ struct HealthCardView: View {
                 .foregroundColor(Color.theme.text.second)
             Text(value)
                 .font(.subheadline)
-                .foregroundColor(Color.theme.background.second)
+                .foregroundColor(Color.theme.text.main)
             
         }
         .padding(.horizontal, 10)

@@ -16,7 +16,7 @@ struct ButtonView: View {
                 .frame(maxWidth: .infinity)
                 .background(Color.theme.other.primary)
                 .clipShape(Capsule())
-                .foregroundColor(Color.theme.text.main)
+                .foregroundColor(Color(hex: "#FAFAFA"))
                 .opacity(disabled ? 0.5 : 1)
         }.disabled(disabled)
     }

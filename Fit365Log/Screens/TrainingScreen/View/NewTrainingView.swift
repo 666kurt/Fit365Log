@@ -65,7 +65,7 @@ extension NewTrainingView {
                     .foregroundColor(Color.theme.text.main)
                 
                 Text("#")
-                    .foregroundColor(Color.theme.background.second)
+                    .foregroundColor(Color.theme.other.primary)
             }
             
             ZStack(alignment: .leading) {
@@ -89,7 +89,7 @@ extension NewTrainingView {
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
         .foregroundColor(Color.theme.text.main)
-        .background(Color.theme.background.light)
+        .background(Color.theme.other.separator)
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
     

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct WelcomeLinkButtonView: View {
+struct ProfileLinkButtonView: View {
     
     let image: String
     let title: String
@@ -29,6 +29,6 @@ struct WelcomeLinkButtonView: View {
 }
 
 #Preview {
-    WelcomeLinkButtonView(image: "bubble.fill", title: "Contact us", url: "https://google.com")
+    ProfileLinkButtonView(image: "bubble.fill", title: "Contact us", url: "https://google.com")
         .padding()
 }

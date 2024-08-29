@@ -6,53 +6,52 @@ struct HealthScreen: View {
     
     @State private var showTaskSheet: Bool = false
     @State private var showEditSheet: Bool = false
+    @State private var isLandscape: Bool = false
     
     var body: some View {
+        NavigationView {
+            if isLandscape {
+                ScrollView(showsIndicators: false) {
+                    content
+                        .orientationReader(isLandscape: $isLandscape)
+                }
+            } else {
+                content
+                    .orientationReader(isLandscape: $isLandscape)
+            }
+        }.navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+}
+
+extension HealthScreen {
+    
+    private var content: some View {
         VStack {
-            ToolBarView(label: "Edit", action: { showEditSheet.toggle() })
-            NavigationTitleView(title: "My Health")
+            staticticsView
+            taskView
             
-            ScrollView(showsIndicators: false) {
-                staticticsView
-                taskView
-                
-                if healthViewModel.tasks.isEmpty {
-                    Text("Write down your tasks and\naccomplish them")
-                        .font(.callout)
-                        .foregroundColor(Color.theme.text.notActive)
-                        .frame(maxHeight: .infinity)
-                        .multilineTextAlignment(.center)
-                } else {
-                    ScrollView(showsIndicators: false) {
-                        ForEach(healthViewModel.tasks, id: \.id) { task in
-                            TaskRowView(title: task.title, action: {
-                                healthViewModel.deleteTask(task: task)
-                            })
-                        }
-                    }
+            if healthViewModel.tasks.isEmpty {
+                taskTextView
+            } else {
+                taskListView
+            }
+        }
+        .navigationTitle("My Health")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showEditSheet.toggle()
+                } label: {
+                    Text("Edit")
                 }
             }
         }
         .sheet(isPresented: $showTaskSheet) {
-            CustomSheet(title: "New tasks") {
-                HealthTaskView()
-                    .environmentObject(healthViewModel)
-            }
+            taskSheet
         }
         .sheet(isPresented: $showEditSheet) {
-            CustomSheet(title: "Edit") {
-                HealthEditView(name: $healthViewModel.name,
-                               age: $healthViewModel.age,
-                               weight: $healthViewModel.weight,
-                               height: $healthViewModel.height,
-                               waist: $healthViewModel.waist,
-                               heartRate: $healthViewModel.heartRate,
-                               caloriesPerDay: $healthViewModel.caloriesPerDay,
-                               diseases: $healthViewModel.diseases, onSave: {
-                    healthViewModel.saveUserHealth()
-                })
-                    .environmentObject(healthViewModel)
-            }
+            editSheet
         }
         .onAppear {
             healthViewModel.fetchTasks()
@@ -100,8 +99,48 @@ struct HealthScreen: View {
         .foregroundColor(Color.theme.text.main)
         .padding(.vertical, 15)
     }
+    
+    private var taskSheet: some View {
+        CustomSheet(title: "New tasks") {
+            HealthTaskView()
+                .environmentObject(healthViewModel)
+        }
+    }
+    
+    private var taskTextView: some View {
+        Text("Write down your tasks and\naccomplish them")
+            .font(.callout)
+            .foregroundColor(Color.theme.text.notActive)
+            .frame(maxHeight: .infinity)
+            .multilineTextAlignment(.center)
+    }
+    
+    private var taskListView: some View {
+        ScrollView(showsIndicators: false) {
+            ForEach(healthViewModel.tasks, id: \.id) { task in
+                TaskRowView(title: task.title, action: {
+                    healthViewModel.deleteTask(task: task)
+                })
+            }
+        }
+    }
+    
+    private var editSheet: some View {
+        CustomSheet(title: "Edit") {
+            HealthEditView(name: $healthViewModel.name,
+                           age: $healthViewModel.age,
+                           weight: $healthViewModel.weight,
+                           height: $healthViewModel.height,
+                           waist: $healthViewModel.waist,
+                           heartRate: $healthViewModel.heartRate,
+                           caloriesPerDay: $healthViewModel.caloriesPerDay,
+                           diseases: $healthViewModel.diseases, onSave: {
+                healthViewModel.saveUserHealth()
+            })
+            .environmentObject(healthViewModel)
+        }
+    }
 }
-
 
 #Preview {
     HealthScreen()

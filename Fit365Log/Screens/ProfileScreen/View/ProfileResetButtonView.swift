@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct WelcomeResetButtonView: View {
+struct ProfileResetButtonView: View {
     
     @Binding var showAlert: Bool
     
@@ -16,7 +16,7 @@ struct WelcomeResetButtonView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(12)
-            .foregroundColor(Color.theme.text.main)
+            .foregroundColor(Color(hex: "#FAFAFA"))
             .background(Color.theme.other.primary)
             .clipShape(Capsule())
         }
@@ -24,6 +24,6 @@ struct WelcomeResetButtonView: View {
 }
 
 #Preview {
-    WelcomeResetButtonView(showAlert: .constant(false))
+    ProfileResetButtonView(showAlert: .constant(false))
         .padding()
 }

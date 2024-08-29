@@ -9,12 +9,12 @@ struct TrainingRowStatsView: View {
         VStack(spacing: 5) {
             Text(name)
                 .font(.subheadline)
-                .foregroundColor(Color.theme.background.second)
+                .foregroundColor(Color.theme.text.main)
                 .lineLimit(1)
             
             Text(value)
                 .font(.title3.weight(.semibold))
-                .foregroundColor(Color.theme.text.second)
+                .foregroundColor(Color.theme.text.main)
                 .lineLimit(1)
         }
         .frame(maxWidth: .infinity)
@@ -29,11 +29,10 @@ struct TrainingRowView: View {
     var body: some View {
         VStack(spacing: 15) {
             
-            
             HStack {
                 Text(training.name)
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundColor(Color.theme.text.main)
+                    .font(.headline.weight(.semibold))
+                    .foregroundColor(Color.theme.text.second)
                     .frame(maxWidth: UIScreen.main.bounds.width / 2 - 50, alignment: .leading)
                     .lineLimit(1)
                 
@@ -53,7 +52,7 @@ struct TrainingRowView: View {
                 Spacer()
                 Rectangle()
                     .frame(width: 1, height: 52)
-                    .foregroundColor(Color.theme.background.second)
+                    .foregroundColor(Color.theme.text.main)
                 Spacer()
                 
                 TrainingRowStatsView(value: training.secondaryMuscles,
@@ -64,11 +63,11 @@ struct TrainingRowView: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text("Description")
                     .font(.callout.weight(.semibold))
-                    .foregroundColor(Color.theme.text.main)
+                    .foregroundColor(Color.theme.text.second)
                 Text(training.desc)
                     .lineLimit(2)
                     .font(.footnote)
-                    .foregroundColor(Color.theme.background.second)
+                    .foregroundColor(Color.theme.text.main)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -77,8 +76,6 @@ struct TrainingRowView: View {
         .padding(15)
         .background(Color.theme.background.light)
         .clipShape(RoundedRectangle(cornerRadius: 12))
-        .padding(.bottom, 15)
-        
     }
     
 }

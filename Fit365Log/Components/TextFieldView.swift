@@ -26,7 +26,7 @@ struct TextFieldView: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
         .foregroundColor(Color.theme.text.main)
-        .background(Color.theme.background.light)
+        .background(Color.theme.other.separator)
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }

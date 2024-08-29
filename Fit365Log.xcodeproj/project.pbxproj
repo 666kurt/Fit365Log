@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1A1A7E2C7F5C8600058826 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A1A7D2C7F5C8600058826 /* MainView.swift */; };
+		FC1A1A812C7F5CBB00058826 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A1A802C7F5CBB00058826 /* Router.swift */; };
+		FC1A1A842C7F5EC000058826 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A1A832C7F5EC000058826 /* ProfileScreen.swift */; };
+		FC1A1A872C7F5F3D00058826 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A1A862C7F5F3D00058826 /* HomeScreen.swift */; };
+		FC1A1A8A2C8054CE00058826 /* ProfileAchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A1A892C8054CE00058826 /* ProfileAchievementsView.swift */; };
+		FC1A1A8C2C80676300058826 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A1A8B2C80676300058826 /* AchievementView.swift */; };
 		FC57E7112C64CEC200B4C2C5 /* Fit365LogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */; };
-		FC57E7132C64CEC200B4C2C5 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7122C64CEC200B4C2C5 /* WelcomeScreen.swift */; };
 		FC57E7152C64CEC400B4C2C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */; };
 		FC57E7182C64CEC400B4C2C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57E7172C64CEC400B4C2C5 /* Preview Assets.xcassets */; };
 		FC57E71A2C64CEC400B4C2C5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7192C64CEC400B4C2C5 /* Persistence.swift */; };
 		FC57E71D2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC57E71B2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld */; };
 		FC57E7292C64D18C00B4C2C5 /* Color+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7282C64D18C00B4C2C5 /* Color+extensions.swift */; };
 		FC57E72B2C64D1F300B4C2C5 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E72A2C64D1F300B4C2C5 /* UIApplication+extension.swift */; };
-		FC57E7302C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E72F2C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift */; };
-		FC57E7322C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7312C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift */; };
-		FC57E7342C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7332C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift */; };
+		FC57E7322C64D7EC00B4C2C5 /* ProfileLinkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7312C64D7EC00B4C2C5 /* ProfileLinkButtonView.swift */; };
+		FC57E7342C64DA9B00B4C2C5 /* ProfileResetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7332C64DA9B00B4C2C5 /* ProfileResetButtonView.swift */; };
 		FC57E7362C64E68B00B4C2C5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7352C64E68B00B4C2C5 /* AlertView.swift */; };
 		FC57E7392C64F97B00B4C2C5 /* HealthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7382C64F97B00B4C2C5 /* HealthScreen.swift */; };
 		FC57E73C2C64F99D00B4C2C5 /* TrainingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E73B2C64F99D00B4C2C5 /* TrainingScreen.swift */; };
-		FC57E73F2C6606D800B4C2C5 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E73E2C6606D800B4C2C5 /* ToolBarView.swift */; };
-		FC57E7412C66075400B4C2C5 /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7402C66075400B4C2C5 /* NavigationTitleView.swift */; };
 		FC57E7432C66096900B4C2C5 /* CustomVStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7422C66096900B4C2C5 /* CustomVStackModifier.swift */; };
 		FC57E7462C660A2800B4C2C5 /* HealthCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7452C660A2800B4C2C5 /* HealthCardView.swift */; };
 		FC57E7482C6610A100B4C2C5 /* CustomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7472C6610A100B4C2C5 /* CustomSheet.swift */; };
@@ -51,27 +53,34 @@
 		FC78B8ED2C75EF100044DEAE /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78B8EC2C75EF100044DEAE /* Workout.swift */; };
 		FC78B8EF2C75EFEB0044DEAE /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78B8EE2C75EFEB0044DEAE /* WorkoutViewModel.swift */; };
 		FC78B8F12C75F3390044DEAE /* WorkoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78B8F02C75F3390044DEAE /* WorkoutRowView.swift */; };
+		FC78B93A2C771E6C0044DEAE /* AppMetricaAdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = FC78B9392C771E6C0044DEAE /* AppMetricaAdSupport */; };
+		FC78B93C2C771E6C0044DEAE /* AppMetricaCore in Frameworks */ = {isa = PBXBuildFile; productRef = FC78B93B2C771E6C0044DEAE /* AppMetricaCore */; };
+		FC78B93E2C771E6C0044DEAE /* AppMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = FC78B93D2C771E6C0044DEAE /* AppMetricaCrashes */; };
+		FC78B9402C771E6C0044DEAE /* AppMetricaWebKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC78B93F2C771E6C0044DEAE /* AppMetricaWebKit */; };
+		FC78B9422C771E8A0044DEAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78B9412C771E8A0044DEAE /* AppDelegate.swift */; };
 		FC8E92392C6CA565006F7E03 /* OrientationReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E92382C6CA565006F7E03 /* OrientationReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC1A1A7D2C7F5C8600058826 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FC1A1A802C7F5CBB00058826 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FC1A1A832C7F5EC000058826 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		FC1A1A862C7F5F3D00058826 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		FC1A1A892C8054CE00058826 /* ProfileAchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAchievementsView.swift; sourceTree = "<group>"; };
+		FC1A1A8B2C80676300058826 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
 		FC57E70D2C64CEC200B4C2C5 /* Fit365Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit365Log.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fit365LogApp.swift; sourceTree = "<group>"; };
-		FC57E7122C64CEC200B4C2C5 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC57E7172C64CEC400B4C2C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC57E7192C64CEC400B4C2C5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FC57E71C2C64CEC400B4C2C5 /* Fit365Log.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fit365Log.xcdatamodel; sourceTree = "<group>"; };
 		FC57E7282C64D18C00B4C2C5 /* Color+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extensions.swift"; sourceTree = "<group>"; };
 		FC57E72A2C64D1F300B4C2C5 /* UIApplication+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
-		FC57E72F2C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAnimateButtonView.swift; sourceTree = "<group>"; };
-		FC57E7312C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeLinkButtonView.swift; sourceTree = "<group>"; };
-		FC57E7332C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeResetButtonView.swift; sourceTree = "<group>"; };
+		FC57E7312C64D7EC00B4C2C5 /* ProfileLinkButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLinkButtonView.swift; sourceTree = "<group>"; };
+		FC57E7332C64DA9B00B4C2C5 /* ProfileResetButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResetButtonView.swift; sourceTree = "<group>"; };
 		FC57E7352C64E68B00B4C2C5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		FC57E7382C64F97B00B4C2C5 /* HealthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthScreen.swift; sourceTree = "<group>"; };
 		FC57E73B2C64F99D00B4C2C5 /* TrainingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingScreen.swift; sourceTree = "<group>"; };
-		FC57E73E2C6606D800B4C2C5 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
-		FC57E7402C66075400B4C2C5 /* NavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
 		FC57E7422C66096900B4C2C5 /* CustomVStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVStackModifier.swift; sourceTree = "<group>"; };
 		FC57E7452C660A2800B4C2C5 /* HealthCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCardView.swift; sourceTree = "<group>"; };
 		FC57E7472C6610A100B4C2C5 /* CustomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheet.swift; sourceTree = "<group>"; };
@@ -100,6 +109,7 @@
 		FC78B8EC2C75EF100044DEAE /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		FC78B8EE2C75EFEB0044DEAE /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
 		FC78B8F02C75F3390044DEAE /* WorkoutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRowView.swift; sourceTree = "<group>"; };
+		FC78B9412C771E8A0044DEAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC8E92382C6CA565006F7E03 /* OrientationReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,12 +118,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC78B9402C771E6C0044DEAE /* AppMetricaWebKit in Frameworks */,
+				FC78B93E2C771E6C0044DEAE /* AppMetricaCrashes in Frameworks */,
+				FC78B93A2C771E6C0044DEAE /* AppMetricaAdSupport in Frameworks */,
+				FC78B93C2C771E6C0044DEAE /* AppMetricaCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC1A1A7F2C7F5C9700058826 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FC1A1A802C7F5CBB00058826 /* Router.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FC1A1A822C7F5EA900058826 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC1A1A832C7F5EC000058826 /* ProfileScreen.swift */,
+				FC1A1A882C7F6FE300058826 /* View */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		FC1A1A852C7F5F3100058826 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC1A1A862C7F5F3D00058826 /* HomeScreen.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		FC1A1A882C7F6FE300058826 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7312C64D7EC00B4C2C5 /* ProfileLinkButtonView.swift */,
+				FC57E7332C64DA9B00B4C2C5 /* ProfileResetButtonView.swift */,
+				FC1A1A892C8054CE00058826 /* ProfileAchievementsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FC57E7042C64CEC200B4C2C5 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +189,7 @@
 				FC57E7442C6609B600B4C2C5 /* Modifiers */,
 				FC57E7232C64CF5800B4C2C5 /* DataManager */,
 				FC57E7252C64CF6A00B4C2C5 /* Extensions */,
+				FC1A1A7F2C7F5C9700058826 /* Utilities */,
 				FC57E7162C64CEC400B4C2C5 /* Preview Content */,
 			);
 			path = Fit365Log;
@@ -168,10 +218,12 @@
 		FC57E7242C64CF6400B4C2C5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FC1A1A7D2C7F5C8600058826 /* MainView.swift */,
 				FC57E7812C6A43F600B4C2C5 /* Onboarding&Splash */,
-				FC57E72C2C64D27D00B4C2C5 /* WelcomeScreen */,
+				FC1A1A852C7F5F3100058826 /* HomeScreen */,
 				FC57E7372C64F96600B4C2C5 /* HealthScreen */,
 				FC57E73A2C64F99000B4C2C5 /* TrainingScreen */,
+				FC1A1A822C7F5EA900058826 /* ProfileScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -190,6 +242,7 @@
 			children = (
 				FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */,
 				FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */,
+				FC78B9412C771E8A0044DEAE /* AppDelegate.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -198,32 +251,12 @@
 			isa = PBXGroup;
 			children = (
 				FC57E7352C64E68B00B4C2C5 /* AlertView.swift */,
-				FC57E73E2C6606D800B4C2C5 /* ToolBarView.swift */,
-				FC57E7402C66075400B4C2C5 /* NavigationTitleView.swift */,
 				FC57E7472C6610A100B4C2C5 /* CustomSheet.swift */,
 				FC57E7492C66156E00B4C2C5 /* TextFieldView.swift */,
 				FC57E74B2C66191F00B4C2C5 /* ButtonView.swift */,
+				FC1A1A8B2C80676300058826 /* AchievementView.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		FC57E72C2C64D27D00B4C2C5 /* WelcomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				FC57E7122C64CEC200B4C2C5 /* WelcomeScreen.swift */,
-				FC57E72D2C64D28C00B4C2C5 /* View */,
-			);
-			path = WelcomeScreen;
-			sourceTree = "<group>";
-		};
-		FC57E72D2C64D28C00B4C2C5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FC57E72F2C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift */,
-				FC57E7312C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift */,
-				FC57E7332C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		FC57E7372C64F96600B4C2C5 /* HealthScreen */ = {
@@ -327,6 +360,10 @@
 			);
 			name = Fit365Log;
 			packageProductDependencies = (
+				FC78B9392C771E6C0044DEAE /* AppMetricaAdSupport */,
+				FC78B93B2C771E6C0044DEAE /* AppMetricaCore */,
+				FC78B93D2C771E6C0044DEAE /* AppMetricaCrashes */,
+				FC78B93F2C771E6C0044DEAE /* AppMetricaWebKit */,
 			);
 			productName = Fit365Log;
 			productReference = FC57E70D2C64CEC200B4C2C5 /* Fit365Log.app */;
@@ -357,6 +394,7 @@
 			);
 			mainGroup = FC57E7042C64CEC200B4C2C5;
 			packageReferences = (
+				FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */,
 			);
 			productRefGroup = FC57E70E2C64CEC200B4C2C5 /* Products */;
 			projectDirPath = "";
@@ -384,33 +422,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC78B9422C771E8A0044DEAE /* AppDelegate.swift in Sources */,
 				FC57E72B2C64D1F300B4C2C5 /* UIApplication+extension.swift in Sources */,
+				FC1A1A8A2C8054CE00058826 /* ProfileAchievementsView.swift in Sources */,
 				FC57E7552C663A1A00B4C2C5 /* TrainingRowView.swift in Sources */,
 				FC78B8ED2C75EF100044DEAE /* Workout.swift in Sources */,
 				FC57E7672C6A087E00B4C2C5 /* TrainingViewModel.swift in Sources */,
+				FC1A1A8C2C80676300058826 /* AchievementView.swift in Sources */,
 				FC57E77E2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift in Sources */,
-				FC57E7342C64DA9B00B4C2C5 /* WelcomeResetButtonView.swift in Sources */,
+				FC57E7342C64DA9B00B4C2C5 /* ProfileResetButtonView.swift in Sources */,
 				FC57E7522C661F4500B4C2C5 /* TaskRowView.swift in Sources */,
 				FC57E71A2C64CEC400B4C2C5 /* Persistence.swift in Sources */,
 				FC57E7432C66096900B4C2C5 /* CustomVStackModifier.swift in Sources */,
-				FC57E7302C64D46100B4C2C5 /* WelcomeAnimateButtonView.swift in Sources */,
 				FC57E7852C6A444400B4C2C5 /* OnboardingStepView.swift in Sources */,
 				FC57E7652C6A070C00B4C2C5 /* NewTrainingView.swift in Sources */,
 				FC57E7832C6A442F00B4C2C5 /* OnboardingScreen.swift in Sources */,
 				FC57E71D2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld in Sources */,
 				FC57E7502C661B2E00B4C2C5 /* HealthEditView.swift in Sources */,
+				FC1A1A812C7F5CBB00058826 /* Router.swift in Sources */,
 				FC57E7802C6A1AB000B4C2C5 /* TimePickerSheet.swift in Sources */,
 				FC57E77D2C6A121F00B4C2C5 /* Trainings+CoreDataClass.swift in Sources */,
 				FC78B8F12C75F3390044DEAE /* WorkoutRowView.swift in Sources */,
+				FC1A1A872C7F5F3D00058826 /* HomeScreen.swift in Sources */,
 				FC57E7482C6610A100B4C2C5 /* CustomSheet.swift in Sources */,
 				FC57E75B2C69ED9400B4C2C5 /* HealthViewModel.swift in Sources */,
 				FC57E7582C69ED2000B4C2C5 /* Task+CoreDataClass.swift in Sources */,
-				FC57E7412C66075400B4C2C5 /* NavigationTitleView.swift in Sources */,
 				FC8E92392C6CA565006F7E03 /* OrientationReader.swift in Sources */,
 				FC57E7632C69F5C400B4C2C5 /* HealthData+CoreDataProperties.swift in Sources */,
 				FC57E74A2C66156E00B4C2C5 /* TextFieldView.swift in Sources */,
 				FC57E7592C69ED2000B4C2C5 /* Task+CoreDataProperties.swift in Sources */,
-				FC57E73F2C6606D800B4C2C5 /* ToolBarView.swift in Sources */,
+				FC1A1A7E2C7F5C8600058826 /* MainView.swift in Sources */,
 				FC57E7362C64E68B00B4C2C5 /* AlertView.swift in Sources */,
 				FC57E7392C64F97B00B4C2C5 /* HealthScreen.swift in Sources */,
 				FC78B8EF2C75EFEB0044DEAE /* WorkoutViewModel.swift in Sources */,
@@ -419,14 +460,14 @@
 				FC57E7462C660A2800B4C2C5 /* HealthCardView.swift in Sources */,
 				FC57E73C2C64F99D00B4C2C5 /* TrainingScreen.swift in Sources */,
 				FC78B8EB2C75E16C0044DEAE /* WorkoutService.swift in Sources */,
-				FC57E7132C64CEC200B4C2C5 /* WelcomeScreen.swift in Sources */,
 				FC57E7292C64D18C00B4C2C5 /* Color+extensions.swift in Sources */,
 				FC57E74C2C66191F00B4C2C5 /* ButtonView.swift in Sources */,
 				FC57E7112C64CEC200B4C2C5 /* Fit365LogApp.swift in Sources */,
 				FC57E7892C6A447A00B4C2C5 /* SplashScreen.swift in Sources */,
+				FC1A1A842C7F5EC000058826 /* ProfileScreen.swift in Sources */,
 				FC57E77A2C6A0EDB00B4C2C5 /* TimePickerView.swift in Sources */,
 				FC57E7872C6A446000B4C2C5 /* OnboardingTabIndicator.swift in Sources */,
-				FC57E7322C64D7EC00B4C2C5 /* WelcomeLinkButtonView.swift in Sources */,
+				FC57E7322C64D7EC00B4C2C5 /* ProfileLinkButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +604,7 @@
 				DEVELOPMENT_TEAM = CTY44DYVYJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "36.5 degree: Workouts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -597,6 +639,7 @@
 				DEVELOPMENT_TEAM = CTY44DYVYJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "36.5 degree: Workouts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -642,6 +685,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appmetrica/appmetrica-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC78B9392C771E6C0044DEAE /* AppMetricaAdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaAdSupport;
+		};
+		FC78B93B2C771E6C0044DEAE /* AppMetricaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaCore;
+		};
+		FC78B93D2C771E6C0044DEAE /* AppMetricaCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaCrashes;
+		};
+		FC78B93F2C771E6C0044DEAE /* AppMetricaWebKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaWebKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FC57E71B2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld */ = {

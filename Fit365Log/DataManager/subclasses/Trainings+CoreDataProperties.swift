@@ -18,6 +18,8 @@ extension Training {
     @NSManaged public var green: Double
     @NSManaged public var blue: Double
     @NSManaged public var id: UUID?
+    @NSManaged public var date: Date?
+
 
 }
 

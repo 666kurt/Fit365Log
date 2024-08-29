@@ -42,7 +42,7 @@ struct SplashScreen: View {
             if showOnboarding {
                 OnboardingScreen(showOnboarding: $showOnboarding)
             } else {
-                WelcomeScreen()
+                MainView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }

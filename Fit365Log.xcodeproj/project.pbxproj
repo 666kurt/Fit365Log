@@ -45,19 +45,11 @@
 		FC57E77D2C6A121F00B4C2C5 /* Trainings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E77B2C6A121F00B4C2C5 /* Trainings+CoreDataClass.swift */; };
 		FC57E77E2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E77C2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift */; };
 		FC57E7802C6A1AB000B4C2C5 /* TimePickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E77F2C6A1AB000B4C2C5 /* TimePickerSheet.swift */; };
-		FC57E7832C6A442F00B4C2C5 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7822C6A442F00B4C2C5 /* OnboardingScreen.swift */; };
-		FC57E7852C6A444400B4C2C5 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7842C6A444400B4C2C5 /* OnboardingStepView.swift */; };
-		FC57E7872C6A446000B4C2C5 /* OnboardingTabIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7862C6A446000B4C2C5 /* OnboardingTabIndicator.swift */; };
 		FC57E7892C6A447A00B4C2C5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7882C6A447A00B4C2C5 /* SplashScreen.swift */; };
 		FC78B8EB2C75E16C0044DEAE /* WorkoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78B8EA2C75E16C0044DEAE /* WorkoutService.swift */; };
 		FC78B8ED2C75EF100044DEAE /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78B8EC2C75EF100044DEAE /* Workout.swift */; };
 		FC78B8EF2C75EFEB0044DEAE /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78B8EE2C75EFEB0044DEAE /* WorkoutViewModel.swift */; };
 		FC78B8F12C75F3390044DEAE /* WorkoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78B8F02C75F3390044DEAE /* WorkoutRowView.swift */; };
-		FC78B93A2C771E6C0044DEAE /* AppMetricaAdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = FC78B9392C771E6C0044DEAE /* AppMetricaAdSupport */; };
-		FC78B93C2C771E6C0044DEAE /* AppMetricaCore in Frameworks */ = {isa = PBXBuildFile; productRef = FC78B93B2C771E6C0044DEAE /* AppMetricaCore */; };
-		FC78B93E2C771E6C0044DEAE /* AppMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = FC78B93D2C771E6C0044DEAE /* AppMetricaCrashes */; };
-		FC78B9402C771E6C0044DEAE /* AppMetricaWebKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC78B93F2C771E6C0044DEAE /* AppMetricaWebKit */; };
-		FC78B9422C771E8A0044DEAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78B9412C771E8A0044DEAE /* AppDelegate.swift */; };
 		FC8E92392C6CA565006F7E03 /* OrientationReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E92382C6CA565006F7E03 /* OrientationReader.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,15 +93,11 @@
 		FC57E77B2C6A121F00B4C2C5 /* Trainings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trainings+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FC57E77C2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trainings+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FC57E77F2C6A1AB000B4C2C5 /* TimePickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerSheet.swift; sourceTree = "<group>"; };
-		FC57E7822C6A442F00B4C2C5 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
-		FC57E7842C6A444400B4C2C5 /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
-		FC57E7862C6A446000B4C2C5 /* OnboardingTabIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabIndicator.swift; sourceTree = "<group>"; };
 		FC57E7882C6A447A00B4C2C5 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		FC78B8EA2C75E16C0044DEAE /* WorkoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutService.swift; sourceTree = "<group>"; };
 		FC78B8EC2C75EF100044DEAE /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		FC78B8EE2C75EFEB0044DEAE /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
 		FC78B8F02C75F3390044DEAE /* WorkoutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRowView.swift; sourceTree = "<group>"; };
-		FC78B9412C771E8A0044DEAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC8E92382C6CA565006F7E03 /* OrientationReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,10 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC78B9402C771E6C0044DEAE /* AppMetricaWebKit in Frameworks */,
-				FC78B93E2C771E6C0044DEAE /* AppMetricaCrashes in Frameworks */,
-				FC78B93A2C771E6C0044DEAE /* AppMetricaAdSupport in Frameworks */,
-				FC78B93C2C771E6C0044DEAE /* AppMetricaCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				FC1A1A802C7F5CBB00058826 /* Router.swift */,
+				FC5D0F3A2C81FF6900823694 /* Helpers */,
+				FC57E7252C64CF6A00B4C2C5 /* Extensions */,
+				FC57E7232C64CF5800B4C2C5 /* DataManager */,
+				FC57E7442C6609B600B4C2C5 /* Modifiers */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -183,12 +171,8 @@
 		FC57E70F2C64CEC200B4C2C5 /* Fit365Log */ = {
 			isa = PBXGroup;
 			children = (
-				FC57E7262C64CFB900B4C2C5 /* Core */,
-				FC57E7242C64CF6400B4C2C5 /* Screens */,
-				FC57E7272C64CFF500B4C2C5 /* Components */,
-				FC57E7442C6609B600B4C2C5 /* Modifiers */,
-				FC57E7232C64CF5800B4C2C5 /* DataManager */,
-				FC57E7252C64CF6A00B4C2C5 /* Extensions */,
+				FC57E7262C64CFB900B4C2C5 /* App */,
+				FC5D0F392C81FEFC00823694 /* UI */,
 				FC1A1A7F2C7F5C9700058826 /* Utilities */,
 				FC57E7162C64CEC400B4C2C5 /* Preview Content */,
 			);
@@ -209,8 +193,6 @@
 				FC8E92372C6B5E24006F7E03 /* subclasses */,
 				FC57E7192C64CEC400B4C2C5 /* Persistence.swift */,
 				FC57E71B2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld */,
-				FC78B8EA2C75E16C0044DEAE /* WorkoutService.swift */,
-				FC78B8EC2C75EF100044DEAE /* Workout.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -219,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				FC1A1A7D2C7F5C8600058826 /* MainView.swift */,
-				FC57E7812C6A43F600B4C2C5 /* Onboarding&Splash */,
+				FC57E7812C6A43F600B4C2C5 /* SplashScreen */,
 				FC1A1A852C7F5F3100058826 /* HomeScreen */,
 				FC57E7372C64F96600B4C2C5 /* HealthScreen */,
 				FC57E73A2C64F99000B4C2C5 /* TrainingScreen */,
@@ -237,14 +219,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FC57E7262C64CFB900B4C2C5 /* Core */ = {
+		FC57E7262C64CFB900B4C2C5 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */,
 				FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */,
-				FC78B9412C771E8A0044DEAE /* AppDelegate.swift */,
 			);
-			path = Core;
+			path = App;
 			sourceTree = "<group>";
 		};
 		FC57E7272C64CFF500B4C2C5 /* Components */ = {
@@ -312,15 +293,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FC57E7812C6A43F600B4C2C5 /* Onboarding&Splash */ = {
+		FC57E7812C6A43F600B4C2C5 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FC57E7822C6A442F00B4C2C5 /* OnboardingScreen.swift */,
-				FC57E7842C6A444400B4C2C5 /* OnboardingStepView.swift */,
-				FC57E7862C6A446000B4C2C5 /* OnboardingTabIndicator.swift */,
 				FC57E7882C6A447A00B4C2C5 /* SplashScreen.swift */,
 			);
-			path = "Onboarding&Splash";
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		FC5D0F392C81FEFC00823694 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FC57E7242C64CF6400B4C2C5 /* Screens */,
+				FC57E7272C64CFF500B4C2C5 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FC5D0F3A2C81FF6900823694 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FC78B8EC2C75EF100044DEAE /* Workout.swift */,
+				FC78B8EA2C75E16C0044DEAE /* WorkoutService.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FC78B8FF2C761BBE0044DEAE /* Frameworks */ = {
@@ -360,10 +356,6 @@
 			);
 			name = Fit365Log;
 			packageProductDependencies = (
-				FC78B9392C771E6C0044DEAE /* AppMetricaAdSupport */,
-				FC78B93B2C771E6C0044DEAE /* AppMetricaCore */,
-				FC78B93D2C771E6C0044DEAE /* AppMetricaCrashes */,
-				FC78B93F2C771E6C0044DEAE /* AppMetricaWebKit */,
 			);
 			productName = Fit365Log;
 			productReference = FC57E70D2C64CEC200B4C2C5 /* Fit365Log.app */;
@@ -394,7 +386,6 @@
 			);
 			mainGroup = FC57E7042C64CEC200B4C2C5;
 			packageReferences = (
-				FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */,
 			);
 			productRefGroup = FC57E70E2C64CEC200B4C2C5 /* Products */;
 			projectDirPath = "";
@@ -422,7 +413,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC78B9422C771E8A0044DEAE /* AppDelegate.swift in Sources */,
 				FC57E72B2C64D1F300B4C2C5 /* UIApplication+extension.swift in Sources */,
 				FC1A1A8A2C8054CE00058826 /* ProfileAchievementsView.swift in Sources */,
 				FC57E7552C663A1A00B4C2C5 /* TrainingRowView.swift in Sources */,
@@ -434,9 +424,7 @@
 				FC57E7522C661F4500B4C2C5 /* TaskRowView.swift in Sources */,
 				FC57E71A2C64CEC400B4C2C5 /* Persistence.swift in Sources */,
 				FC57E7432C66096900B4C2C5 /* CustomVStackModifier.swift in Sources */,
-				FC57E7852C6A444400B4C2C5 /* OnboardingStepView.swift in Sources */,
 				FC57E7652C6A070C00B4C2C5 /* NewTrainingView.swift in Sources */,
-				FC57E7832C6A442F00B4C2C5 /* OnboardingScreen.swift in Sources */,
 				FC57E71D2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld in Sources */,
 				FC57E7502C661B2E00B4C2C5 /* HealthEditView.swift in Sources */,
 				FC1A1A812C7F5CBB00058826 /* Router.swift in Sources */,
@@ -466,7 +454,6 @@
 				FC57E7892C6A447A00B4C2C5 /* SplashScreen.swift in Sources */,
 				FC1A1A842C7F5EC000058826 /* ProfileScreen.swift in Sources */,
 				FC57E77A2C6A0EDB00B4C2C5 /* TimePickerView.swift in Sources */,
-				FC57E7872C6A446000B4C2C5 /* OnboardingTabIndicator.swift in Sources */,
 				FC57E7322C64D7EC00B4C2C5 /* ProfileLinkButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,6 +595,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -643,6 +631,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -685,40 +674,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/appmetrica/appmetrica-sdk-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		FC78B9392C771E6C0044DEAE /* AppMetricaAdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
-			productName = AppMetricaAdSupport;
-		};
-		FC78B93B2C771E6C0044DEAE /* AppMetricaCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
-			productName = AppMetricaCore;
-		};
-		FC78B93D2C771E6C0044DEAE /* AppMetricaCrashes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
-			productName = AppMetricaCrashes;
-		};
-		FC78B93F2C771E6C0044DEAE /* AppMetricaWebKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FC78B9382C771E6C0044DEAE /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
-			productName = AppMetricaWebKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FC57E71B2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld */ = {

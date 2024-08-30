@@ -4,7 +4,6 @@ struct SplashScreen: View {
     
     @State private var progress: CGFloat = 0.0
     @State private var isActive: Bool = false
-    @Binding var showOnboarding: Bool
     let persistenceController: PersistenceController
     
     var body: some View {
@@ -39,14 +38,11 @@ struct SplashScreen: View {
             startLoading()
         }
         .fullScreenCover(isPresented: $isActive) {
-            if showOnboarding {
-                OnboardingScreen(showOnboarding: $showOnboarding)
-            } else {
-                MainView()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            }
+            MainView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+    
     
     func startLoading() {
         Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
@@ -62,6 +58,5 @@ struct SplashScreen: View {
 
 
 #Preview {
-    SplashScreen(showOnboarding: .constant(true),
-                 persistenceController: PersistenceController.shared)
+    SplashScreen(persistenceController: PersistenceController.shared)
 }

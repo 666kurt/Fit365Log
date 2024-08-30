@@ -64,7 +64,9 @@ struct TrainingScreen: View {
                         .opacity(animateCard ? 0.0 : 1.0)
                 }
             }
-        }.navigationViewStyle(StackNavigationViewStyle())
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .colorScheme(.light)
     }
     
     private var hasAdd: String {

@@ -19,7 +19,9 @@ struct HealthScreen: View {
                 content
                     .orientationReader(isLandscape: $isLandscape)
             }
-        }.navigationViewStyle(StackNavigationViewStyle())
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .colorScheme(.light)
     }
     
 }

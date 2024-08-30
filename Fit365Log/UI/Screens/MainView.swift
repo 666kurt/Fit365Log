@@ -34,7 +34,7 @@ struct MainView: View {
                     Label("My profile", systemImage: "person.fill")
                 }.tag(Screens.profile)
             
-        }
+        }.colorScheme(.light)
     }
 }
 

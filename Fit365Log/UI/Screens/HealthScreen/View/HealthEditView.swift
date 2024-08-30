@@ -16,7 +16,7 @@ struct HealthEditView: View {
     var onSave: () -> Void
     
     var body: some View {
-        ScrollView(showsIndicators: true) {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: 15) {
                 TextFieldView(placeholder: "Name", text: $name)
                 TextFieldView(placeholder: "Age", text: $age)

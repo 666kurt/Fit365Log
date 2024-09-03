@@ -45,20 +45,7 @@ struct TrainingRowView: View {
                     .lineLimit(1)
             }
             
-            HStack(spacing: 0) {
-                TrainingRowStatsView(value: training.coreMuscle,
-                                     name: "Core muscle")
-                
-                Spacer()
-                Rectangle()
-                    .frame(width: 1, height: 52)
-                    .foregroundColor(Color.theme.text.main)
-                Spacer()
-                
-                TrainingRowStatsView(value: training.secondaryMuscles,
-                                     name: "Secondary muscles")
-                
-            }
+            Divider()
             
             VStack(alignment: .leading, spacing: 5) {
                 Text("Description")
@@ -86,8 +73,7 @@ struct TrainingRowView: View {
     let sampleTraining = Training(context: context)
     sampleTraining.name = "Pull-push +legs"
     sampleTraining.tag = "cardio"
-    sampleTraining.coreMuscle = "Gluteus maximus"
-    sampleTraining.secondaryMuscles = "Calf muscle"
+    sampleTraining.category = "Training"
     sampleTraining.desc = "Description"
     sampleTraining.red = 0
     sampleTraining.green = 240

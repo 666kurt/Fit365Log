@@ -13,6 +13,16 @@
 		FC1A1A872C7F5F3D00058826 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A1A862C7F5F3D00058826 /* HomeScreen.swift */; };
 		FC1A1A8A2C8054CE00058826 /* ProfileAchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A1A892C8054CE00058826 /* ProfileAchievementsView.swift */; };
 		FC1A1A8C2C80676300058826 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A1A8B2C80676300058826 /* AchievementView.swift */; };
+		FC5196302C8600B10046552E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC51962F2C8600B10046552E /* FirebaseAnalytics */; };
+		FC5196322C8600B10046552E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = FC5196312C8600B10046552E /* FirebaseAnalyticsOnDeviceConversion */; };
+		FC5196342C8600B10046552E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = FC5196332C8600B10046552E /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		FC5196362C8600B10046552E /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = FC5196352C8600B10046552E /* FirebaseAppCheck */; };
+		FC5196382C8600B10046552E /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = FC5196372C8600B10046552E /* FirebaseAppDistribution-Beta */; };
+		FC51963A2C8600C10046552E /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FC5196392C8600C10046552E /* FirebaseRemoteConfig */; };
+		FC51963D2C86017E0046552E /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51963C2C86017E0046552E /* RemoteConfigManager.swift */; };
+		FC51963F2C8601C40046552E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51963E2C8601C40046552E /* WebView.swift */; };
+		FC51964B2C86067E0046552E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC51964A2C86067E0046552E /* GoogleService-Info.plist */; };
+		FC5196622C87529F0046552E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5196612C87529F0046552E /* ImagePicker.swift */; };
 		FC57E7112C64CEC200B4C2C5 /* Fit365LogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */; };
 		FC57E7152C64CEC400B4C2C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */; };
 		FC57E7182C64CEC400B4C2C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57E7172C64CEC400B4C2C5 /* Preview Assets.xcassets */; };
@@ -46,6 +56,7 @@
 		FC57E77E2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E77C2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift */; };
 		FC57E7802C6A1AB000B4C2C5 /* TimePickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E77F2C6A1AB000B4C2C5 /* TimePickerSheet.swift */; };
 		FC57E7892C6A447A00B4C2C5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57E7882C6A447A00B4C2C5 /* SplashScreen.swift */; };
+		FC5D0F962C85FE1F00823694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D0F952C85FE1F00823694 /* AppDelegate.swift */; };
 		FC8E92392C6CA565006F7E03 /* OrientationReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E92382C6CA565006F7E03 /* OrientationReader.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +67,10 @@
 		FC1A1A862C7F5F3D00058826 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		FC1A1A892C8054CE00058826 /* ProfileAchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAchievementsView.swift; sourceTree = "<group>"; };
 		FC1A1A8B2C80676300058826 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
+		FC51963C2C86017E0046552E /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
+		FC51963E2C8601C40046552E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		FC51964A2C86067E0046552E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC5196612C87529F0046552E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FC57E70D2C64CEC200B4C2C5 /* Fit365Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit365Log.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fit365LogApp.swift; sourceTree = "<group>"; };
 		FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +105,7 @@
 		FC57E77C2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trainings+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FC57E77F2C6A1AB000B4C2C5 /* TimePickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerSheet.swift; sourceTree = "<group>"; };
 		FC57E7882C6A447A00B4C2C5 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		FC5D0F952C85FE1F00823694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC8E92382C6CA565006F7E03 /* OrientationReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +114,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5196362C8600B10046552E /* FirebaseAppCheck in Frameworks */,
+				FC5196302C8600B10046552E /* FirebaseAnalytics in Frameworks */,
+				FC5196382C8600B10046552E /* FirebaseAppDistribution-Beta in Frameworks */,
+				FC51963A2C8600C10046552E /* FirebaseRemoteConfig in Frameworks */,
+				FC5196342C8600B10046552E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				FC5196322C8600B10046552E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +129,7 @@
 		FC1A1A7F2C7F5C9700058826 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				FC1A1A802C7F5CBB00058826 /* Router.swift */,
+				FC51963B2C86016F0046552E /* Helpers */,
 				FC57E7252C64CF6A00B4C2C5 /* Extensions */,
 				FC57E7232C64CF5800B4C2C5 /* DataManager */,
 				FC57E7442C6609B600B4C2C5 /* Modifiers */,
@@ -140,6 +162,17 @@
 				FC1A1A892C8054CE00058826 /* ProfileAchievementsView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FC51963B2C86016F0046552E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FC1A1A802C7F5CBB00058826 /* Router.swift */,
+				FC51963C2C86017E0046552E /* RemoteConfigManager.swift */,
+				FC51963E2C8601C40046552E /* WebView.swift */,
+				FC5196612C87529F0046552E /* ImagePicker.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FC57E7042C64CEC200B4C2C5 = {
@@ -213,8 +246,10 @@
 		FC57E7262C64CFB900B4C2C5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FC51964A2C86067E0046552E /* GoogleService-Info.plist */,
 				FC57E7142C64CEC400B4C2C5 /* Assets.xcassets */,
 				FC57E7102C64CEC200B4C2C5 /* Fit365LogApp.swift */,
+				FC5D0F952C85FE1F00823694 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -336,6 +371,12 @@
 			);
 			name = Fit365Log;
 			packageProductDependencies = (
+				FC51962F2C8600B10046552E /* FirebaseAnalytics */,
+				FC5196312C8600B10046552E /* FirebaseAnalyticsOnDeviceConversion */,
+				FC5196332C8600B10046552E /* FirebaseAnalyticsWithoutAdIdSupport */,
+				FC5196352C8600B10046552E /* FirebaseAppCheck */,
+				FC5196372C8600B10046552E /* FirebaseAppDistribution-Beta */,
+				FC5196392C8600C10046552E /* FirebaseRemoteConfig */,
 			);
 			productName = Fit365Log;
 			productReference = FC57E70D2C64CEC200B4C2C5 /* Fit365Log.app */;
@@ -366,6 +407,7 @@
 			);
 			mainGroup = FC57E7042C64CEC200B4C2C5;
 			packageReferences = (
+				FC51962E2C8600B10046552E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = FC57E70E2C64CEC200B4C2C5 /* Products */;
 			projectDirPath = "";
@@ -383,6 +425,7 @@
 			files = (
 				FC57E7182C64CEC400B4C2C5 /* Preview Assets.xcassets in Resources */,
 				FC57E7152C64CEC400B4C2C5 /* Assets.xcassets in Resources */,
+				FC51964B2C86067E0046552E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +439,7 @@
 				FC57E72B2C64D1F300B4C2C5 /* UIApplication+extension.swift in Sources */,
 				FC1A1A8A2C8054CE00058826 /* ProfileAchievementsView.swift in Sources */,
 				FC57E7552C663A1A00B4C2C5 /* TrainingRowView.swift in Sources */,
+				FC5196622C87529F0046552E /* ImagePicker.swift in Sources */,
 				FC57E7672C6A087E00B4C2C5 /* TrainingViewModel.swift in Sources */,
 				FC1A1A8C2C80676300058826 /* AchievementView.swift in Sources */,
 				FC57E77E2C6A121F00B4C2C5 /* Trainings+CoreDataProperties.swift in Sources */,
@@ -410,10 +454,12 @@
 				FC57E7802C6A1AB000B4C2C5 /* TimePickerSheet.swift in Sources */,
 				FC57E77D2C6A121F00B4C2C5 /* Trainings+CoreDataClass.swift in Sources */,
 				FC1A1A872C7F5F3D00058826 /* HomeScreen.swift in Sources */,
+				FC51963D2C86017E0046552E /* RemoteConfigManager.swift in Sources */,
 				FC57E7482C6610A100B4C2C5 /* CustomSheet.swift in Sources */,
 				FC57E75B2C69ED9400B4C2C5 /* HealthViewModel.swift in Sources */,
 				FC57E7582C69ED2000B4C2C5 /* Task+CoreDataClass.swift in Sources */,
 				FC8E92392C6CA565006F7E03 /* OrientationReader.swift in Sources */,
+				FC5D0F962C85FE1F00823694 /* AppDelegate.swift in Sources */,
 				FC57E7632C69F5C400B4C2C5 /* HealthData+CoreDataProperties.swift in Sources */,
 				FC57E74A2C66156E00B4C2C5 /* TextFieldView.swift in Sources */,
 				FC57E7592C69ED2000B4C2C5 /* Task+CoreDataProperties.swift in Sources */,
@@ -426,6 +472,7 @@
 				FC57E73C2C64F99D00B4C2C5 /* TrainingScreen.swift in Sources */,
 				FC57E7292C64D18C00B4C2C5 /* Color+extensions.swift in Sources */,
 				FC57E74C2C66191F00B4C2C5 /* ButtonView.swift in Sources */,
+				FC51963F2C8601C40046552E /* WebView.swift in Sources */,
 				FC57E7112C64CEC200B4C2C5 /* Fit365LogApp.swift in Sources */,
 				FC57E7892C6A447A00B4C2C5 /* SplashScreen.swift in Sources */,
 				FC1A1A842C7F5EC000058826 /* ProfileScreen.swift in Sources */,
@@ -567,7 +614,7 @@
 				DEVELOPMENT_TEAM = CTY44DYVYJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "36.5 degree: Workouts";
+				INFOPLIST_KEY_CFBundleDisplayName = "HobbyHorse: Ride & Track";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -603,7 +650,7 @@
 				DEVELOPMENT_TEAM = CTY44DYVYJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "36.5 degree: Workouts";
+				INFOPLIST_KEY_CFBundleDisplayName = "HobbyHorse: Ride & Track";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -650,6 +697,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC51962E2C8600B10046552E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC51962F2C8600B10046552E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC51962E2C8600B10046552E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FC5196312C8600B10046552E /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC51962E2C8600B10046552E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		FC5196332C8600B10046552E /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC51962E2C8600B10046552E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		FC5196352C8600B10046552E /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC51962E2C8600B10046552E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		FC5196372C8600B10046552E /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC51962E2C8600B10046552E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		FC5196392C8600C10046552E /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC51962E2C8600B10046552E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FC57E71B2C64CEC400B4C2C5 /* Fit365Log.xcdatamodeld */ = {

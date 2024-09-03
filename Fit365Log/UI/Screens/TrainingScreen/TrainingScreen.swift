@@ -8,22 +8,37 @@ struct TrainingScreen: View {
     @State private var showAchievementCard: Bool = false
     @State private var animateCard: Bool = false
     
+    @State private var selectedCategory: String = "Training"
+    
     var body: some View {
         NavigationView {
             ZStack {
                 VStack(spacing: 30) {
                     
-
-                        if trainingViewModel.trainings.isEmpty {
-                            trainingEmptyView
-                        } else {
-                            ScrollView(showsIndicators: false) {
-                                LazyVStack(spacing: 15) {
-                                    ForEach(trainingViewModel.trainings, id: \.id) { training in
-                                        TrainingRowView(training: training)
-                                    }
+                    Picker("Select Category", selection: $selectedCategory) {
+                        Text("Training").tag("Training")
+                        Text("Hobby Horsing").tag("Hobby Horsing")
+                    }
+                    .padding(2)
+                    .background(Color(hex: "#787880").opacity(0.12))
+                    .clipShape(RoundedRectangle(cornerRadius: 9))
+                    .pickerStyle(.segmented)
+                    .onAppear {
+                        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.theme.text.second)
+                        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color.white), .font: UIFont.boldSystemFont(ofSize: 13)], for: .selected)
+                        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color.black), .font: UIFont.boldSystemFont(ofSize: 13)], for: .normal)
+                    }
+                    
+                    if trainingViewModel.trainings.isEmpty {
+                        trainingEmptyView
+                    } else {
+                        ScrollView(showsIndicators: false) {
+                            LazyVStack(spacing: 15) {
+                                ForEach(filteredTrainings, id: \.id) { training in
+                                    TrainingRowView(training: training)
                                 }
                             }
+                        }
                         
                     }
                 }
@@ -66,6 +81,10 @@ struct TrainingScreen: View {
         return !trainingViewModel.trainings.isEmpty
         ? "Add"
         : ""
+    }
+    
+    private var filteredTrainings: [Training] {
+        return trainingViewModel.trainings.filter { $0.category == selectedCategory }
     }
     
     private func handleAchievementDisplay() {

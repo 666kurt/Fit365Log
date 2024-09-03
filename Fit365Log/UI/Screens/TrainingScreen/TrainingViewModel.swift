@@ -5,11 +5,10 @@ import SwiftUI
 final class TrainingViewModel: ObservableObject {
     
     @Published var name: String = ""
-    @Published var coreMuscle: String = ""
-    @Published var secondaryMuscles: String = ""
     @Published var desc: String = ""
     @Published var tag: String = ""
     @Published var tagColor: Color = .red
+    @Published var category: String = ""
     @Published var id: UUID?
     
     @Published var lastAchievementDate: Date? {
@@ -41,8 +40,6 @@ final class TrainingViewModel: ObservableObject {
     func addTraining(alpha: Double, red: Double, green: Double, blue: Double) {
         let newTraining = Training(context: viewContext)
         newTraining.name = name
-        newTraining.coreMuscle = coreMuscle
-        newTraining.secondaryMuscles = secondaryMuscles
         newTraining.desc = desc
         newTraining.tag = tag
         newTraining.alpha = alpha
@@ -51,16 +48,16 @@ final class TrainingViewModel: ObservableObject {
         newTraining.blue = blue
         newTraining.id = UUID()
         newTraining.date = Date()
+        newTraining.category = category
         saveContext()
         resetFields()
     }
     
     private func resetFields() {
         name = ""
-        coreMuscle = ""
-        secondaryMuscles = ""
         desc = ""
         tag = ""
+        category = ""
         tagColor = .red
     }
     

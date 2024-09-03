@@ -5,21 +5,30 @@ struct NewTrainingView: View {
     @EnvironmentObject var trainingViewModel: TrainingViewModel
     @Environment(\.presentationMode) var presentationMode
     
+    private let categories = ["Training", "Hobby Horsing"]
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             ZStack(alignment: .bottom) {
                 VStack(spacing: 15) {
                     
+                    Picker("Category", selection: $trainingViewModel.category) {
+                        ForEach(categories, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 12)
+                    .foregroundColor(Color.theme.text.main)
+                    .background(Color.theme.other.separator)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .pickerStyle(.menu)
+                    
                     TextFieldView(placeholder: "Name",
                                   text: $trainingViewModel.name)
                     
                     tagTextField
-                    
-                    TextFieldView(placeholder: "Core muscle",
-                                  text: $trainingViewModel.coreMuscle)
-                    
-                    TextFieldView(placeholder: "Secondary muscles",
-                                  text: $trainingViewModel.secondaryMuscles)
                     
                     TextFieldView(placeholder: "Description",
                                   text: $trainingViewModel.desc)
@@ -47,9 +56,8 @@ struct NewTrainingView: View {
     private var isDisabled: Bool {
         return trainingViewModel.name.isEmpty ||
         trainingViewModel.tag.isEmpty ||
-        trainingViewModel.coreMuscle.isEmpty ||
-        trainingViewModel.secondaryMuscles.isEmpty ||
-        trainingViewModel.desc.isEmpty
+        trainingViewModel.desc.isEmpty ||
+        trainingViewModel.category.isEmpty
     }
 }
 

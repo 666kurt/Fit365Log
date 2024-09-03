@@ -9,8 +9,6 @@ extension Training {
     }
 
     @NSManaged public var name: String
-    @NSManaged public var coreMuscle: String
-    @NSManaged public var secondaryMuscles: String
     @NSManaged public var desc: String
     @NSManaged public var tag: String
     @NSManaged public var alpha: Double
@@ -19,6 +17,7 @@ extension Training {
     @NSManaged public var blue: Double
     @NSManaged public var id: UUID?
     @NSManaged public var date: Date?
+    @NSManaged public var category: String
 
 
 }

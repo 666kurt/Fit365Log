@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="HealthData" representedClassName=".HealthData" syncable="YES">
+        <attribute name="additionalImage" optional="YES" attributeType="Binary"/>
         <attribute name="age" attributeType="String"/>
-        <attribute name="calories" attributeType="String"/>
-        <attribute name="diseases" attributeType="String"/>
-        <attribute name="heartRate" attributeType="String"/>
+        <attribute name="experience" attributeType="String"/>
         <attribute name="height" attributeType="String"/>
-        <attribute name="name" attributeType="String"/>
-        <attribute name="waist" attributeType="String"/>
+        <attribute name="horseImage" optional="YES" attributeType="Binary"/>
         <attribute name="weight" attributeType="String"/>
     </entity>
     <entity name="Task" representedClassName=".Task" syncable="YES">
@@ -17,14 +15,13 @@
     <entity name="Training" representedClassName=".Training" syncable="YES">
         <attribute name="alpha" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="blue" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="coreMuscle" attributeType="String"/>
+        <attribute name="category" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="green" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="red" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="secondaryMuscles" attributeType="String"/>
         <attribute name="tag" attributeType="String"/>
     </entity>
 </model>

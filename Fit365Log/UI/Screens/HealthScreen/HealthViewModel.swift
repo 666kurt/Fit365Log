@@ -1,19 +1,18 @@
 import Foundation
-import CoreData
 import SwiftUI
+import CoreData
 
 final class HealthViewModel: ObservableObject {
     @Published var tasks: [Task] = []
     @Published var taskLabel: String = ""
     
-    @Published var name: String = ""
     @Published var age: String = ""
     @Published var weight: String = ""
     @Published var height: String = ""
-    @Published var waist: String = ""
-    @Published var heartRate: String = ""
-    @Published var caloriesPerDay: String = ""
-    @Published var diseases: String = ""
+    @Published var experience: String = ""
+    
+    @Published var myHorseImageData: Data? = nil
+    @Published var additionalHorseImageData: Data? = nil
     
     private let viewContext = PersistenceController.shared.container.viewContext
     
@@ -49,13 +48,13 @@ final class HealthViewModel: ObservableObject {
             viewContext.reset()
             
             fetchTasks()
-
+            
         } catch {
             print("Error deleting all tasks: \(error)")
         }
     }
-
-
+    
+    
     
     func deleteTask(task: Task) {
         viewContext.delete(task)
@@ -68,14 +67,12 @@ final class HealthViewModel: ObservableObject {
         do {
             let healthData = try viewContext.fetch(request)
             if let data = healthData.first {
-                self.name = data.name
                 self.age = data.age
                 self.weight = data.weight
                 self.height = data.height
-                self.waist = data.waist
-                self.heartRate = data.heartRate
-                self.caloriesPerDay = data.calories
-                self.diseases = data.diseases
+                self.experience = data.experience
+                self.myHorseImageData = data.horseImage
+                self.additionalHorseImageData = data.additionalImage
             }
         } catch {
             print("Error fetching user health: \(error)")
@@ -88,14 +85,12 @@ final class HealthViewModel: ObservableObject {
             let healthData = try viewContext.fetch(request)
             let data = healthData.first ?? HealthData(context: viewContext)
             
-            data.name = name
             data.age = age
             data.weight = weight
             data.height = height
-            data.waist = waist
-            data.heartRate = heartRate
-            data.calories = caloriesPerDay
-            data.diseases = diseases
+            data.experience = experience
+            data.horseImage = myHorseImageData
+            data.additionalImage = additionalHorseImageData
             
             try viewContext.save()
         } catch {
@@ -111,21 +106,27 @@ final class HealthViewModel: ObservableObject {
             try viewContext.execute(deleteRequest)
             viewContext.reset()
             
-            name = ""
             age = ""
             weight = ""
             height = ""
-            waist = ""
-            heartRate = ""
-            caloriesPerDay = ""
-            diseases = ""
+            experience = ""
+            myHorseImageData = nil
+            additionalHorseImageData = nil
             
             fetchHealthData()
         } catch {
             print("Error deleting user data: \(error)")
         }
     }
+    
+    // MARK: - Image Selection
+    func handleImageSelection(image: UIImage) {
+        myHorseImageData = image.jpegData(compressionQuality: 1.0)
+    }
 
+    func handleImageSelection2(image: UIImage) {
+        additionalHorseImageData = image.jpegData(compressionQuality: 1.0)
+    }
     
     private func saveContext() {
         do {

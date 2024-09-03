@@ -39,7 +39,7 @@ extension HealthScreen {
                 taskListView
             }
         }
-        .navigationTitle("My Health")
+        .navigationTitle("My information")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
@@ -73,17 +73,61 @@ extension HealthScreen {
             HStack(spacing: 10) {
                 HealthCardView(title: "Height",
                                value: healthViewModel.height.isEmpty ? "no data" : healthViewModel.height)
-                HealthCardView(title: "Waist",
-                               value: healthViewModel.waist.isEmpty ? "no data" : healthViewModel.waist)
+                HealthCardView(title: "Experience",
+                               value: healthViewModel.experience.isEmpty ? "no data" : healthViewModel.experience)
             }
+            
+            
             HStack(spacing: 10) {
-                HealthCardView(title: "Heart rate",
-                               value: healthViewModel.heartRate.isEmpty ? "no data" : healthViewModel.heartRate)
-                HealthCardView(title: "Calories per day",
-                               value: healthViewModel.caloriesPerDay.isEmpty ? "no data" : healthViewModel.caloriesPerDay)
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("My horse")
+                        .font(.title3.weight(.semibold))
+                        .foregroundColor(Color.theme.text.second)
+                    if let imageData = healthViewModel.myHorseImageData, let uiImage = UIImage(data: imageData) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 154, height: 120)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    } else {
+                        Image(systemName: "photo")
+                            .frame(width: 154, height: 120)
+                            .background(Color.theme.other.separator)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                }
+                .padding(.horizontal, 10)
+                .padding(.top, 10)
+                .padding(.bottom, 16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color.theme.background.light)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Additional horse")
+                        .font(.title3.weight(.semibold))
+                        .foregroundColor(Color.theme.text.second)
+                    if let imageData = healthViewModel.additionalHorseImageData, let uiImage = UIImage(data: imageData) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 154, height: 120)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    } else {
+                        Image(systemName: "photo")
+                            .frame(width: 154, height: 120)
+                            .background(Color.theme.other.separator)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                }
+                .padding(.horizontal, 10)
+                .padding(.top, 10)
+                .padding(.bottom, 16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color.theme.background.light)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
             }
-            HealthCardView(title: "Diseases",
-                           value: healthViewModel.diseases.isEmpty ? "no data" : healthViewModel.diseases)
+
         }
     }
     
@@ -129,17 +173,8 @@ extension HealthScreen {
     
     private var editSheet: some View {
         CustomSheet(title: "Edit") {
-            HealthEditView(name: $healthViewModel.name,
-                           age: $healthViewModel.age,
-                           weight: $healthViewModel.weight,
-                           height: $healthViewModel.height,
-                           waist: $healthViewModel.waist,
-                           heartRate: $healthViewModel.heartRate,
-                           caloriesPerDay: $healthViewModel.caloriesPerDay,
-                           diseases: $healthViewModel.diseases, onSave: {
-                healthViewModel.saveUserHealth()
-            })
-            .environmentObject(healthViewModel)
+            HealthEditView()
+                .environmentObject(healthViewModel)
         }
     }
 }

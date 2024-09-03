@@ -6,6 +6,10 @@ struct MainView: View {
     @StateObject var healthViewModel = HealthViewModel()
     @StateObject var trainingViewModel = TrainingViewModel()
     
+    @StateObject private var remoteConfigManager = RemoteConfigManager()
+    @State private var showWebView = false
+    @State private var showAlert = false
+    
     var body: some View {
         
         TabView(selection: $router.selectedScreen) {
@@ -34,7 +38,11 @@ struct MainView: View {
                     Label("My profile", systemImage: "person.fill")
                 }.tag(Screens.profile)
             
-        }.colorScheme(.light)
+        }
+        .colorScheme(.light)
+        .onAppear() {
+            
+        }
     }
 }
 
